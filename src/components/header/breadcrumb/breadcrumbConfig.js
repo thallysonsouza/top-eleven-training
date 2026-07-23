@@ -1,0 +1,37 @@
+export const breadcrumbConfig = {
+    dashboard:{
+        label:"Dashboard",
+        path:"/app"
+    },
+    teams:{
+        label:"Teams",
+        path:"/app/teams"
+    },
+    players:{
+        label:"Players"
+    },
+    simulator:{
+        label:"Simulator",
+        path:"/app/simulator"
+    },
+    tournament:{
+        label:"Tournament",
+        path:"/app/tournament"
+    },
+    statistics:{
+        label:"Statistics",
+        path:"/app/statistics"
+    },
+    guides:{
+        label:"Guides",
+        path:"/app/guides"
+    },
+    downloads:{
+        label:"Downloads",
+        path:"/app/downloads"
+    },
+    premium:{
+        label:"Premium",
+        path:"/app/premium"
+    }
+};

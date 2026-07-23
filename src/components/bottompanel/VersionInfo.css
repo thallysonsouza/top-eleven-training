@@ -1,0 +1,29 @@
+.version-info{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.version-info strong{
+
+    display:block;
+
+    color:var(--text);
+
+    font-size:15px;
+
+}
+
+.version-info span{
+
+    color:var(--text-muted);
+
+    font-size:12px;
+
+}

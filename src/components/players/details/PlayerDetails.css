@@ -1,0 +1,25 @@
+.player-details{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.player-details-message{
+
+    padding:30px;
+
+    font-size:18px;
+
+    color:var(--text-secondary);
+
+}

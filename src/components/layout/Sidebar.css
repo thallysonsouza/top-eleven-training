@@ -1,0 +1,13 @@
+.sidebar{
+
+    height:100%;
+
+    background:var(--sidebar);
+
+    border-radius:var(--radius-medium);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}

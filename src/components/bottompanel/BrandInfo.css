@@ -1,0 +1,29 @@
+.brand-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.brand-info strong{
+
+    display:block;
+
+    color:var(--text);
+
+    font-size:15px;
+
+}
+
+.brand-info span{
+
+    color:var(--text-muted);
+
+    font-size:12px;
+
+}

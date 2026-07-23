@@ -1,0 +1,21 @@
+.teams-header{
+
+    margin-bottom:30px;
+
+}
+
+.teams-header h1{
+
+    color:var(--text);
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.teams-header p{
+
+    color:var(--text-secondary);
+
+}

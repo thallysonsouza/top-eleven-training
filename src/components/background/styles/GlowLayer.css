@@ -1,0 +1,51 @@
+@import "../animations/glow.css";
+
+.background-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at 20% 20%,
+
+            rgba(255,215,0,.06),
+
+            transparent 35%
+
+        ),
+
+        radial-gradient(
+
+            circle at 80% 15%,
+
+            rgba(255,215,0,.05),
+
+            transparent 32%
+
+        ),
+
+        radial-gradient(
+
+            circle at 50% 90%,
+
+            rgba(255,190,0,.04),
+
+            transparent 42%
+
+        );
+
+        animation:
+
+            glowPulse
+
+            18s
+
+            ease-in-out
+
+            infinite;
+
+}

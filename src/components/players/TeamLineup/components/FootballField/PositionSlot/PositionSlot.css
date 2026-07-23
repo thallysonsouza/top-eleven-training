@@ -1,0 +1,60 @@
+.position-slot{
+
+    width:100%;
+    height:82px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    border:1px dashed rgba(255,255,255,.18);
+
+    background:rgba(0,0,0,.18);
+
+    color:white;
+
+}
+
+.position-slot:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#FFD700;
+
+    background:rgba(255,215,0,.08);
+
+    box-shadow:0 0 18px rgba(255,215,0,.18);
+
+}
+
+.position-slot-plus{
+
+    color:#FFD700;
+
+}
+
+.position-slot small{
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.position-slot{
+
+    position:relative;
+
+}

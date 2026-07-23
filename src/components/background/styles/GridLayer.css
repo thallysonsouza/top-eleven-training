@@ -1,0 +1,67 @@
+.background-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.35;
+
+    background-image:
+
+        /* Linhas principais horizontais */
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            transparent 0,
+
+            transparent 119px,
+
+            rgba(255,215,0,.05) 120px
+
+        ),
+
+        /* Linhas principais verticais */
+
+        repeating-linear-gradient(
+
+            90deg,
+
+            transparent 0,
+
+            transparent 119px,
+
+            rgba(255,215,0,.05) 120px
+
+        ),
+
+        /* Linhas secundárias horizontais */
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            transparent 0,
+
+            transparent 29px,
+
+            rgba(255,215,0,.012) 30px
+
+        ),
+
+        /* Linhas secundárias verticais */
+
+        repeating-linear-gradient(
+
+            90deg,
+
+            transparent 0,
+
+            transparent 29px,
+
+            rgba(255,215,0,.012) 30px
+
+        );
+
+}

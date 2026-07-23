@@ -1,0 +1,179 @@
+.player-overview{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #252525 0%,
+            #1b1b1b 100%
+        );
+
+    border:1px solid rgba(255,215,0,.18);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.player-overview::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,215,0,.08),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+/*======================================
+                TOP
+======================================*/
+
+.player-overview-top{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:80px;
+
+    align-items:stretch;
+
+}
+
+/*======================================
+             SHARED
+======================================*/
+
+.player-header-title{
+
+    color:#FFD700;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+
+}
+
+.player-header-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:5px 0;
+
+}
+
+.player-header-row span{
+
+    color:#9c9c9c;
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+.player-header-row strong{
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/*======================================
+            DIVIDER
+======================================*/
+
+.player-overview-divider{
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/*======================================
+            TITLE
+======================================*/
+
+.player-overview-title{
+
+    color:#FFD700;
+
+    text-align:center;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/*======================================
+            ACTION BAR
+======================================*/
+
+.player-overview-actions{
+
+    height:0;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    border-top:0 solid rgba(255,215,0,.15);
+
+    background:rgba(255,255,255,.02);
+
+    transition:.25s;
+
+}
+
+.player-overview:hover .player-overview-actions{
+
+    height:52px;
+
+    border-top:1px solid rgba(255,215,0,.18);
+
+}

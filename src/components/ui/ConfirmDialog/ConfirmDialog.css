@@ -1,0 +1,151 @@
+.confirm-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(4px);
+
+    z-index:1000;
+
+}
+
+.confirm-dialog{
+
+    width:430px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:32px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:18px;
+
+    box-shadow:var(--shadow);
+
+    animation:confirmOpen .2s ease;
+
+}
+
+@keyframes confirmOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.confirm-icon{
+
+    color:var(--danger);
+
+}
+
+.confirm-dialog h2{
+
+    color:var(--text);
+
+    font-size:24px;
+
+}
+
+.confirm-dialog p{
+
+    color:var(--text-secondary);
+
+    line-height:1.6;
+
+}
+
+.confirm-buttons{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:10px;
+
+}
+
+.cancel-button{
+
+    height:42px;
+
+    padding:0 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    cursor:pointer;
+
+}
+
+.cancel-button:hover{
+
+    background:var(--card-hover);
+
+}
+
+.delete-button{
+
+    height:42px;
+
+    padding:0 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d92d20;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.delete-button:hover{
+
+    filter:brightness(1.08);
+
+}

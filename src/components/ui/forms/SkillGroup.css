@@ -1,0 +1,43 @@
+.skill-group{
+
+    margin-bottom:12px;
+
+}
+
+.skill-group-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:16px;
+
+}
+
+.skill-group-defense{
+
+    color:#39d353;
+
+}
+
+.skill-group-attack{
+
+    color:#ff6b6b;
+
+}
+
+.skill-group-physical{
+
+    color:#58a6ff;
+
+}
+
+.skill-group-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}

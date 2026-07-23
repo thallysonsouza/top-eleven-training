@@ -1,0 +1,145 @@
+.accent-layer{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+/* ===========================
+   CANTOS
+=========================== */
+
+.corner{
+
+    position:absolute;
+
+    width:60px;
+
+    height:60px;
+
+    border:1px solid rgba(255,215,0,.12);
+
+    opacity:.18;
+
+}
+
+.corner-tl{
+
+    top:30px;
+    left:30px;
+
+    border-right:none;
+    border-bottom:none;
+
+}
+
+.corner-tr{
+
+    top:30px;
+    right:30px;
+
+    border-left:none;
+    border-bottom:none;
+
+}
+
+.corner-bl{
+
+    bottom:30px;
+    left:30px;
+
+    border-right:none;
+    border-top:none;
+
+}
+
+.corner-br{
+
+    bottom:30px;
+    right:30px;
+
+    border-left:none;
+    border-top:none;
+
+}
+
+/* ===========================
+   BARRAS
+=========================== */
+
+.accent-bar{
+
+    position:absolute;
+
+    height:2px;
+
+    background:rgba(255,215,0,.18);
+
+    border-radius:20px;
+
+}
+
+.bar-1{
+
+    width:160px;
+
+    top:22%;
+
+    left:12%;
+
+}
+
+.bar-2{
+
+    width:120px;
+
+    bottom:18%;
+
+    right:14%;
+
+}
+
+.bar-3{
+
+    width:220px;
+
+    top:68%;
+
+    left:42%;
+
+}
+
+/* ===========================
+   QUADRADOS
+=========================== */
+
+.accent-square{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    border:1px solid rgba(255,215,0,.25);
+
+    transform:rotate(45deg);
+
+}
+
+.square-1{
+
+    top:20%;
+
+    right:24%;
+
+}
+
+.square-2{
+
+    bottom:25%;
+
+    left:28%;
+
+}

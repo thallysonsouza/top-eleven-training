@@ -1,0 +1,161 @@
+@import "../animations/lines.css";
+
+.tech-lines{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   LINHAS
+========================================== */
+
+.tech-line{
+
+    position:absolute;
+
+    height:2px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,215,0,.25),
+
+        rgba(255,215,0,.08),
+
+        transparent
+
+    );
+
+    opacity:.20;
+
+    animation:techPulse 8s ease-in-out infinite;
+
+}
+
+/* Cada linha pulsa em um momento diferente */
+
+.line-1{
+
+    width:520px;
+
+    top:12%;
+
+    left:-120px;
+
+    transform:rotate(-20deg);
+
+    animation-delay:0s;
+
+}
+
+.line-2{
+
+    width:420px;
+
+    top:38%;
+
+    right:-120px;
+
+    transform:rotate(-18deg);
+
+    animation-delay:2s;
+
+}
+
+.line-3{
+
+    width:700px;
+
+    top:67%;
+
+    left:20%;
+
+    transform:rotate(-12deg);
+
+    animation-delay:4s;
+
+}
+
+.line-4{
+
+    width:450px;
+
+    bottom:8%;
+
+    left:60%;
+
+    transform:rotate(-20deg);
+
+    animation-delay:6s;
+
+}
+
+/* ==========================================
+   PONTOS
+========================================== */
+
+.tech-dot{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#FFD700;
+
+    box-shadow:0 0 10px rgba(255,215,0,.5);
+
+    animation:techPulse 6s ease-in-out infinite;
+
+}
+
+.dot-1{
+
+    top:17%;
+
+    left:23%;
+
+}
+
+.dot-2{
+
+    top:42%;
+
+    right:18%;
+
+    animation-delay:1s;
+
+}
+
+.dot-3{
+
+    top:71%;
+
+    left:46%;
+
+    animation-delay:2s;
+
+}
+
+.dot-4{
+
+    bottom:13%;
+
+    right:22%;
+
+    animation-delay:3s;
+
+}

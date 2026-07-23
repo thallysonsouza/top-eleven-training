@@ -1,0 +1,109 @@
+.button{
+
+    height:42px;
+
+    padding:0 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+/* PRIMARY */
+
+.button-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.button-primary:hover{
+
+    filter:brightness(1.08);
+
+}
+
+/* SECONDARY */
+
+.button-secondary{
+
+    background:transparent;
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+.button-secondary:hover{
+
+    background:var(--card-hover);
+
+}
+
+/* DANGER */
+
+.button-danger{
+
+    background:#d92d20;
+
+    color:white;
+
+}
+
+.button-danger:hover{
+
+    filter:brightness(1.08);
+
+}
+
+/* SUCCESS */
+
+.button-success{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+.button-success:hover{
+
+    filter:brightness(1.08);
+
+}
+
+/* GHOST */
+
+.button-ghost{
+
+    background:transparent;
+
+    color:var(--text-secondary);
+
+}
+
+.button-ghost:hover{
+
+    background:var(--card-hover);
+
+}

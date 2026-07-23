@@ -1,0 +1,168 @@
+.team-card{
+
+    height:160px;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #252525 0%,
+            #1b1b1b 100%
+        );
+
+    border:1px solid rgba(255,215,0,.18);
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+.team-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,215,0,.08),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#FFD700;
+
+    box-shadow:
+        0 0 0 1px rgba(255,215,0,.15),
+        0 12px 35px rgba(255,215,0,.12);
+
+}
+
+.team-card-main{
+
+    flex:1;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px;
+
+}
+
+.team-card h3{
+
+    color:#ffffff;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+    text-align:center;
+
+}
+
+.team-overall{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.team-stars{
+
+    color:#FFD700;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    text-shadow:0 0 8px rgba(255,215,0,.35);
+
+}
+
+.team-overall strong{
+
+    color:#FFD700;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.team-players-count{
+
+    color:#BBBBBB;
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+.team-card-actions{
+
+    height:0;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    border-top:0 solid rgba(255,215,0,.15);
+
+    background:rgba(255,255,255,.02);
+
+    transition:.25s;
+
+}
+
+.team-card:hover .team-card-actions{
+
+    height:48px;
+
+    border-top:1px solid rgba(255,215,0,.18);
+
+}

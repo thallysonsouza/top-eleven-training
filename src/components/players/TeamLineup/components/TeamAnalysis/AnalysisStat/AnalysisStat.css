@@ -1,0 +1,47 @@
+.analysis-stat{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+}
+
+.analysis-stat-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.analysis-stat-left svg{
+
+    color:#FFD700;
+
+}
+
+.analysis-stat-left span{
+
+    color:#d4d4d4;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.analysis-stat strong{
+
+    color:#FFD700;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}

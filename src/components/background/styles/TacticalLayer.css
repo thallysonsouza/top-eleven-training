@@ -1,0 +1,139 @@
+.tactical-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* ======================================
+   LINHAS
+====================================== */
+
+.tactical-line{
+
+    position:absolute;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,215,0,.10),
+
+            transparent
+
+        );
+
+    border-radius:999px;
+
+    opacity:.25;
+
+}
+
+.line-1{
+
+    width:260px;
+
+    top:24%;
+
+    left:10%;
+
+}
+
+.line-2{
+
+    width:320px;
+
+    bottom:20%;
+
+    right:12%;
+
+}
+
+/* ======================================
+   NÓS
+====================================== */
+
+.tactical-node{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,215,0,.18);
+
+    background:rgba(255,215,0,.04);
+
+}
+
+.node-1{
+
+    top:23.4%;
+
+    left:10%;
+
+}
+
+.node-2{
+
+    top:23.4%;
+
+    left:26%;
+
+}
+
+.node-3{
+
+    bottom:19.4%;
+
+    right:28%;
+
+}
+
+.node-4{
+
+    bottom:19.4%;
+
+    right:12%;
+
+}
+
+/* ======================================
+   ARCO TÁTICO
+====================================== */
+
+.tactical-arc{
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    border:2px solid rgba(255,215,0,.06);
+
+    border-radius:50%;
+
+    border-bottom-color:transparent;
+
+    border-left-color:transparent;
+
+    transform:rotate(-35deg);
+
+    top:38%;
+
+    left:42%;
+
+}

@@ -1,0 +1,120 @@
+@import "../animations/particles.css";
+
+.particle-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+/* ============================
+   PARTÍCULA BASE
+============================ */
+
+.particle{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    background:#FFD700;
+
+    opacity:.18;
+
+    box-shadow:
+
+        0 0 10px rgba(255,215,0,.35);
+
+    animation-name:particlePulse;
+
+    animation-timing-function:ease-in-out;
+
+    animation-iteration-count:infinite;
+
+}
+
+/* ============================
+   VELOCIDADES DIFERENTES
+============================ */
+
+.particle:nth-child(2n){
+
+    animation-duration:7s;
+
+}
+
+.particle:nth-child(3n){
+
+    animation-duration:10s;
+
+}
+
+.particle:nth-child(4n){
+
+    animation-duration:13s;
+
+}
+
+.particle:nth-child(5n){
+
+    animation-duration:15s;
+
+}
+
+/* ============================
+   POSIÇÕES
+============================ */
+
+.particle-1{top:8%;left:10%;}
+.particle-2{top:15%;left:28%;}
+.particle-3{top:22%;left:55%;}
+.particle-4{top:12%;left:82%;}
+.particle-5{top:30%;left:18%;}
+.particle-6{top:35%;left:44%;}
+.particle-7{top:42%;left:73%;}
+.particle-8{top:48%;left:90%;}
+.particle-9{top:55%;left:8%;}
+.particle-10{top:60%;left:26%;}
+
+.particle-11{top:68%;left:40%;}
+.particle-12{top:74%;left:63%;}
+.particle-13{top:80%;left:82%;}
+.particle-14{top:88%;left:15%;}
+.particle-15{top:92%;left:48%;}
+
+.particle-16{top:18%;left:94%;}
+.particle-17{top:24%;left:6%;}
+.particle-18{top:39%;left:32%;}
+.particle-19{top:51%;left:58%;}
+.particle-20{top:66%;left:94%;}
+
+.particle-21{top:9%;left:67%;}
+.particle-22{top:16%;left:45%;}
+.particle-23{top:27%;left:78%;}
+.particle-24{top:37%;left:12%;}
+.particle-25{top:46%;left:52%;}
+
+.particle-26{top:57%;left:71%;}
+.particle-27{top:64%;left:5%;}
+.particle-28{top:72%;left:30%;}
+.particle-29{top:82%;left:56%;}
+.particle-30{top:95%;left:76%;}
+
+.particle-31{top:11%;left:38%;}
+.particle-32{top:20%;left:88%;}
+.particle-33{top:33%;left:60%;}
+.particle-34{top:44%;left:22%;}
+.particle-35{top:53%;left:96%;}
+
+.particle-36{top:70%;left:52%;}
+.particle-37{top:78%;left:10%;}
+.particle-38{top:86%;left:35%;}
+.particle-39{top:91%;left:66%;}
+.particle-40{top:97%;left:92%;}

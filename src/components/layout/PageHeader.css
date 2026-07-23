@@ -1,0 +1,43 @@
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+}
+
+.page-header-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.page-header-left h1{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.page-header-left p{
+
+    color:var(--text-secondary);
+
+}
+
+.page-header-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}

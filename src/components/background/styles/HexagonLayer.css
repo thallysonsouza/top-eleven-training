@@ -1,0 +1,82 @@
+@import "../animations/hexagons.css";
+
+.hexagon-layer{
+
+    animation:
+
+        rotateHex
+
+        45s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* ==========================================
+   HEXÁGONO BASE
+========================================== */
+
+.hexagon{
+
+    position:absolute;
+
+    width:520px;
+
+    height:300px;
+
+    opacity:.045;
+
+    border:2px solid rgba(255,215,0,.35);
+
+    clip-path:polygon(
+
+        25% 0%,
+        75% 0%,
+
+        100% 50%,
+
+        75% 100%,
+
+        25% 100%,
+
+        0% 50%
+
+    );
+
+}
+
+/* ==========================================
+   POSIÇÕES
+========================================== */
+
+.hex-1{
+
+    top:-100px;
+
+    right:-120px;
+
+    transform:rotate(18deg);
+
+}
+
+.hex-2{
+
+    bottom:-120px;
+
+    left:-100px;
+
+    transform:rotate(-12deg);
+
+}
+
+.hex-3{
+
+    top:35%;
+
+    left:58%;
+
+    transform:scale(.7) rotate(8deg);
+
+}

@@ -1,0 +1,97 @@
+.player-info-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.player-info-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#FFD700;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.player-info-title svg{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+.player-info-panel h2{
+
+    color:#ffffff;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+.player-info-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:6px 0;
+
+}
+
+.player-info-row span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#9d9d9d;
+
+    font-size:13px;
+
+}
+
+.player-info-row svg{
+
+    width:15px;
+
+    height:15px;
+
+    color:#FFD700;
+
+}
+
+.player-info-row strong{
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}

@@ -1,0 +1,91 @@
+.team-lineup-card{
+
+    height:160px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #252525 0%,
+            #1b1b1b 100%
+        );
+
+    border:1px solid rgba(255,215,0,.18);
+
+    transition:.25s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.team-lineup-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,215,0,.08),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+.team-lineup-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#FFD700;
+
+    box-shadow:
+        0 0 0 1px rgba(255,215,0,.15),
+        0 12px 35px rgba(255,215,0,.12);
+
+}
+
+.team-lineup-card svg{
+
+    color:#FFD700;
+
+}
+
+.team-lineup-card h3{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.team-lineup-card span{
+
+    color:#b5b5b5;
+
+    font-size:13px;
+
+}

@@ -1,0 +1,59 @@
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.input-label{
+
+    color:var(--text);
+
+    font-size:14px;
+
+}
+
+.input{
+
+    height:46px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border-light);
+
+    background:var(--input);
+
+    color:var(--text);
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.input::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+.input:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 10px rgba(0,210,106,.25);
+
+}
+
+.full-width{
+
+    width:100%;
+
+}

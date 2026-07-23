@@ -1,0 +1,53 @@
+.skill-field{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:18px;
+
+}
+
+.skill-field label{
+
+    flex:1;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+.skill-field input{
+
+    width:90px;
+
+    height:38px;
+
+    padding:0 12px;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+    background:var(--background);
+
+    color:var(--text);
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+.skill-field input:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+}

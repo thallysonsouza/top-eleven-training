@@ -1,0 +1,23 @@
+.noise-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.018;
+
+    background-image:
+
+        radial-gradient(
+
+            rgba(255,255,255,.55) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:4px 4px;
+
+    mix-blend-mode:soft-light;
+
+}

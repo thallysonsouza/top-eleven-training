@@ -1,0 +1,65 @@
+.skill-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:9px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.skill-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.skill-name{
+
+    color:#7b7b7b;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+.skill-value{
+
+    color:#8f8f8f;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    min-width:36px;
+
+    text-align:right;
+
+    transition:.25s;
+
+}
+
+/* White Skills */
+
+.key-skill{
+
+    color:#FFD700;
+
+    font-weight:700;
+
+}
+
+.key-value{
+
+    color:#FFD700;
+
+    font-weight:700;
+
+}

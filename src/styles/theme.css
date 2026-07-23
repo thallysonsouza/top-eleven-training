@@ -1,0 +1,57 @@
+:root{
+
+    /* ========= CORES ========= */
+
+    --background:#111111;
+
+    --card:#1f1f1f;
+
+    --card-hover:#272727;
+
+    --background-light:#252525;
+
+    --border:#333333;
+
+    --primary:#00e676;
+
+    --warning:#f4b400;
+
+    --danger:#ef5350;
+
+    --text:#ffffff;
+
+    --text-secondary:#d0d0d0;
+
+    --text-muted:#8c8c8c;
+
+    /* ========= LAYOUT ========= */
+
+    --sidebar-width:80px;
+
+    --sidebar-open-width:220px;
+
+    --right-panel-width:250px;
+
+    --header-height:75px;
+
+    --bottom-height:75px;
+
+    --layout-gap:20px;
+
+    --page-padding:20px;
+
+    /* ========= BORDAS ========= */
+
+    --radius-small:10px;
+
+    --radius-medium:16px;
+
+    --radius-large:22px;
+
+    /* ========= SOMBRAS ========= */
+
+    --shadow:
+
+        0 10px 25px rgba(0,0,0,.30);
+
+}

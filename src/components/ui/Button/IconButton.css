@@ -1,0 +1,107 @@
+.icon-button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.20s;
+
+    flex-shrink:0;
+
+}
+
+/*==========================
+        SVG
+==========================*/
+
+.icon-button svg{
+
+    width:18px;
+
+    height:18px;
+
+    stroke:currentColor;
+
+}
+
+/*==========================
+      SECONDARY
+==========================*/
+
+.icon-button-secondary{
+
+    background:transparent;
+
+    color:#d6d6d6;
+
+}
+
+.icon-button-secondary:hover{
+
+    background:rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+}
+
+/*==========================
+       PRIMARY
+==========================*/
+
+.icon-button-primary{
+
+    background:#FFD700;
+
+    color:#151515;
+
+}
+
+.icon-button-primary:hover{
+
+    filter:brightness(1.06);
+
+}
+
+/*==========================
+        DANGER
+==========================*/
+
+.icon-button-danger{
+
+    background:transparent;
+
+    color:#ff5b5b;
+
+}
+
+.icon-button-danger:hover{
+
+    background:rgba(255,91,91,.12);
+
+    color:#ff6d6d;
+
+}
+
+/*==========================
+       DISABLED
+==========================*/
+
+.icon-button:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}

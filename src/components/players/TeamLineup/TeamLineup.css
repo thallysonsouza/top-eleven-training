@@ -1,0 +1,30 @@
+.team-lineup{
+
+    width:100%;
+    height:100%;
+
+    display:grid;
+
+    grid-template-columns:4fr 1fr;
+
+    gap:20px;
+
+}
+
+.team-lineup-message{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:100%;
+
+    font-size:18px;
+
+    color:var(--text-secondary);
+
+}

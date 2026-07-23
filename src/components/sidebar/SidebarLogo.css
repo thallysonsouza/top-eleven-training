@@ -1,0 +1,91 @@
+.sidebar-logo{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:25px;
+
+    padding:0px;
+
+    border:none;
+
+    background:transparent;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.sidebar-logo:hover{
+
+    background:var(--card-hover);
+
+}
+
+.logo-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    transition:.25s;
+
+}
+
+.sidebar-logo:hover .logo-icon{
+
+    transform:scale(1.08);
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-align:left;
+
+}
+
+.logo-text h2{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+}
+
+.logo-text span{
+
+    color:var(--text-muted);
+
+    font-size:12px;
+
+}

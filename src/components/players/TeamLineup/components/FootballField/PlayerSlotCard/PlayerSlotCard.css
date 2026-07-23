@@ -1,0 +1,182 @@
+.player-slot-card{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(37,37,37,.95) 0%,
+            rgba(27,27,27,.95) 100%
+        );
+
+    border:1px solid rgba(255,215,0,.12);
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+.player-slot-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,215,0,.06),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+.player-slot-card:hover{
+
+    border-color:#FFD700;
+
+    box-shadow:
+        0 0 0 1px rgba(255,215,0,.15),
+        0 8px 22px rgba(255,215,0,.12);
+
+}
+
+.player-slot-main{
+
+    flex:1;
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    gap:6px;
+
+    padding:10px;
+
+    width:100%;
+
+}
+
+.player-slot-name{
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+
+}
+
+.player-slot-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.player-slot-stars{
+
+    display:flex;
+
+    gap:1px;
+
+}
+
+.star{
+
+    font-size:10px;
+
+    color:rgba(255,255,255,.18);
+
+}
+
+.star.filled{
+
+    color:#FFD700;
+
+    text-shadow:0 0 6px rgba(255,215,0,.35);
+
+}
+
+.player-slot-overall{
+
+    color:#FFD700;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.player-slot-actions{
+
+    height:0;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    border-top:0 solid rgba(255,215,0,.15);
+
+    background:rgba(255,255,255,.02);
+
+    transition:.25s;
+
+}
+
+.player-slot-card:hover .player-slot-actions{
+
+    height:40px;
+
+    border-top:1px solid rgba(255,215,0,.18);
+
+}
+
+.player-slot-actions .icon-button-secondary{
+
+    color:#d6d6d6;
+
+}
+
+.player-slot-actions .icon-button-danger{
+
+    color:#ff5b5b;
+
+}
