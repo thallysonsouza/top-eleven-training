@@ -3,125 +3,61 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./components/layout/Dashboard";
 
 import Login from "./pages/Login";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
-
 import Home from "./pages/Home";
-import Simulator from "./pages/Simulator";
-import Players from "./pages/Players";
-import Exercises from "./pages/Exercises";
-import Tournament from "./pages/Tournament";
-import Statistics from "./pages/Statistics";
-import Guides from "./pages/Guides";
-import Downloads from "./pages/Downloads";
-import Premium from "./pages/Premium";
 import Teams from "./pages/Teams";
-import TeamDetails from "./pages/teams/ClubDashboard";
-import PlayerDetails from "./components/players/details/PlayerDetails";
+import Players from "./pages/Players";
+
+import AuctionSimulator from "./pages/AuctionSimulator";
+import ManualAuctionAnalyzer from "./pages/ManualAuctionAnalyzer";
+import SmartAuctionAnalyzer from "./pages/SmartAuctionAnalyzer";
+
+import TrainingSimulator from "./pages/TrainingSimulator";
+
 import TeamLineup from "./components/players/TeamLineup/TeamLineup";
+import TeamAnalysisManager from "./components/players/TeamAnalysis/TeamAnalysisManager";
 
 function App() {
+  return (
+    <Routes>
+      {/* Login */}
 
-    return (
+      <Route path="/login" element={<Login />} />
 
-        <Routes>
+      {/* Dashboard */}
 
-            {/* Login */}
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
-            <Route
-                path="/login"
-                element={<Login />}
-            />
+      <Route path="/app" element={<Dashboard />}>
+        {/* Home */}
 
-            {/* Dashboard */}
+        <Route index element={<Home />} />
 
-            <Route
-                path="/"
-                element={<Navigate to="/login" replace />}
-            />
+        {/* Main Pages */}
 
-            <Route
-                path="/app"
-                element={<Dashboard />}
-            >
+        <Route path="teams" element={<Teams />} />
 
-                <Route
-                    index
-                    element={<Home />}
-                />
+        <Route path="auction" element={<AuctionSimulator />} />
 
-                <Route
-                    path="simulator"
-                    element={<Simulator />}
-                />
+        <Route path="auction/manual" element={<ManualAuctionAnalyzer />} />
 
-                <Route
-                    path="exercises"
-                    element={<Exercises />}
-                />
+        <Route path="auction/smart" element={<SmartAuctionAnalyzer />} />
 
-                <Route
-                    path="tournament"
-                    element={<Tournament />}
-                />
+        <Route path="training" element={<TrainingSimulator />} />
 
-                <Route
-                    path="statistics"
-                    element={<Statistics />}
-                />
+        {/* Team */}
 
-                <Route
-                    path="guides"
-                    element={<Guides />}
-                />
+        <Route path="players/:teamId" element={<Players />} />
 
-                <Route
-                    path="downloads"
-                    element={<Downloads />}
-                />
+        <Route path="lineup/:teamId" element={<TeamLineup />} />
 
-                <Route
-                    path="premium"
-                    element={<Premium />}
-                />
-                <Route
+        <Route path="analysis/:teamId" element={<TeamAnalysisManager />} />
+      </Route>
 
-                    path="teams"
+      {/* Invalid Route */}
 
-                    element={<Teams/>}
-
-                />
-
-                <Route
-
-                    path="players/:teamId"
-
-                    element={<Players />}
-
-                />
-
-                <Route
-                    path="player/:teamId/:playerId"
-                    element={<PlayerDetails />}
-                />
-
-                <Route
-                    path="lineup/:teamId"
-                    element={<TeamLineup />}
-                />
-
-            </Route>
-
-            {/* Redireciona qualquer rota inexistente */}
-
-            <Route
-                path="*"
-                element={<Navigate to="/login" replace />}
-            />
-
-        </Routes>
-
-    );
-
+      <Route path="*" element={<Navigate to="/login" replace />} />
+    </Routes>
+  );
 }
 
 export default App;

@@ -1,0 +1,21 @@
+.navigation-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.navigation-header h1 {
+  color: var(--text);
+
+  font-size: 34px;
+}
+
+.navigation-header-actions {
+  display: flex;
+
+  gap: 8px;
+}

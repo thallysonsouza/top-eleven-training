@@ -1,22 +1,14 @@
 import calculateAverage from "../util/average";
 import createWhiteOverall from "./createWhiteOverall";
 
-export default function createTeamWhiteOverall(team){
+export default function createTeamWhiteOverall(team) {
+  if (!team.players.length) {
+    return 0;
+  }
 
-    if(!team.players.length){
-        return 0;
-    }
-
-    return Math.round(
-
-        calculateAverage(
-
-            team.players.map(player =>
-                createWhiteOverall(player)
-            )
-
-        )
-
-    );
-
+  return Number(
+    calculateAverage(
+      team.players.map((player) => createWhiteOverall(player)),
+    ).toFixed(1),
+  );
 }

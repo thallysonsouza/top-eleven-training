@@ -1,23 +1,7 @@
-export function removePlayer(lineup, position){
+export function removePlayer(lineup, position) {
+  return {
+    ...lineup,
 
-    return{
-
-        ...lineup,
-
-        [position]:null
-
-    };
-
-}
-
-export function increasePlayer(player){
-
-    // próxima etapa
-
-}
-
-export function decreasePlayer(player){
-
-    // próxima etapa
-
+    [position]: null,
+  };
 }

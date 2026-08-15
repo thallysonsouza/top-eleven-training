@@ -1,0 +1,67 @@
+.region-preview {
+  background: #202020;
+
+  border: 1px solid #444;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  color: white;
+}
+
+.region-preview h2 {
+  text-align: center;
+}
+
+.preview-image {
+  height: 220px;
+
+  border: 2px dashed #666;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #101010;
+}
+
+.preview-result {
+  background: #2a2a2a;
+
+  padding: 15px;
+
+  border-radius: 8px;
+}
+
+.preview-confidence {
+  background: #2a2a2a;
+
+  padding: 15px;
+
+  border-radius: 8px;
+}
+
+.preview-confidence strong {
+  color: #ffd700;
+
+  font-size: 26px;
+}
+
+.preview-image img {
+  width: 100%;
+
+  display: block;
+
+  border-radius: 6px;
+}

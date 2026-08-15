@@ -1,21 +1,21 @@
-.players-header{
+.players-header {
+  display: flex;
 
-    margin-bottom:30px;
+  justify-content: space-between;
 
+  align-items: center;
+
+  margin-bottom: 30px;
 }
 
-.players-header h1{
+.players-header h1 {
+  color: var(--text);
 
-    color:var(--text);
-
-    font-size:34px;
-
-    margin-bottom:8px;
-
+  font-size: 34px;
 }
 
-.players-header p{
+.players-header-actions {
+  display: flex;
 
-    color:var(--text-secondary);
-
+  gap: 8px;
 }

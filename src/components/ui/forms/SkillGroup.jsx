@@ -2,79 +2,41 @@ import "./SkillGroup.css";
 import SkillField from "./SkillField";
 
 function SkillGroup({
+  title,
 
-    title,
+  attributes,
 
-    attributes,
+  skills,
 
-    skills,
+  keySkills,
 
-    handleSkillChange
+  handleSkillChange,
+}) {
+  const colorClass = {
+    Defense: "skill-group-defense",
 
-}){
+    Attack: "skill-group-attack",
 
-    const colorClass={
+    Physical: "skill-group-physical",
+  };
 
-        Defense:"skill-group-defense",
+  return (
+    <div className="skill-group">
+      <h3 className={`skill-group-title ${colorClass[title]}`}>{title}</h3>
 
-        Attack:"skill-group-attack",
-
-        Physical:"skill-group-physical"
-
-    };
-
-    return(
-
-        <div className="skill-group">
-
-            <h3
-
-                className={`skill-group-title ${colorClass[title]}`}
-
-            >
-
-                {title}
-
-            </h3>
-
-            <div className="skill-group-list">
-
-                {
-
-                    attributes.map(attribute=>(
-
-                        <SkillField
-
-                            key={attribute}
-
-                            attribute={attribute}
-
-                            value={skills[attribute]}
-
-                            onChange={(e)=>
-
-                                handleSkillChange(
-
-                                    attribute,
-
-                                    e.target.value
-
-                                )
-
-                            }
-
-                        />
-
-                    ))
-
-                }
-
-            </div>
-
-        </div>
-
-    );
-
+      <div className="skill-group-list">
+        {attributes.map((attribute) => (
+          <SkillField
+            key={attribute}
+            attribute={attribute}
+            value={skills[attribute]}
+            isKey={keySkills?.[attribute]}
+            onChange={(e) => handleSkillChange(attribute, e.target.value)}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default SkillGroup;

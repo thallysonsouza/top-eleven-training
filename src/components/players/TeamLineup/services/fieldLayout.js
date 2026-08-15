@@ -1,125 +1,33 @@
 const fieldLayout = [
+  {
+    row: 1,
 
-    {
+    positions: [null, "DL", null, "ML", "AML", null],
+  },
 
-        row:1,
+  {
+    row: 2,
 
-        positions:[
+    positions: [null, "DC1", "DMC1", "MC1", "AMC1", "ST1"],
+  },
 
-            null,
+  {
+    row: 3,
 
-            "ST1",
+    positions: ["GK", "DC2", "DMC2", "MC2", "AMC2", "ST2"],
+  },
 
-            "ST2",
+  {
+    row: 4,
 
-            "ST3",
+    positions: [null, "DC3", "DMC3", "MC3", "AMC3", "ST3"],
+  },
 
-            null
+  {
+    row: 5,
 
-        ]
-
-    },
-
-    {
-
-        row:2,
-
-        positions:[
-
-            "AML",
-
-            "AMC1",
-
-            "AMC2",
-
-            "AMC3",
-
-            "AMR"
-
-        ]
-
-    },
-
-    {
-
-        row:3,
-
-        positions:[
-
-            "ML",
-
-            "MC1",
-
-            "MC2",
-
-            "MC3",
-
-            "MR"
-
-        ]
-
-    },
-
-    {
-
-        row:4,
-
-        positions:[
-
-            null,
-
-            "DMC1",
-
-            null,
-
-            "DMC2",
-
-            null
-
-        ]
-
-    },
-
-    {
-
-        row:5,
-
-        positions:[
-
-            "DL",
-
-            "DC1",
-
-            "DC2",
-
-            "DC3",
-
-            "DR"
-
-        ]
-
-    },
-
-    {
-
-        row:6,
-
-        positions:[
-
-            null,
-
-            null,
-
-            "GK",
-
-            null,
-
-            null
-
-        ]
-
-    }
-
+    positions: [null, "DR", null, "MR", "AMR", null],
+  },
 ];
 
 export default fieldLayout;

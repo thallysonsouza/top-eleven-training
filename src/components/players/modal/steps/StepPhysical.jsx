@@ -1,41 +1,32 @@
-import SkillGroup from "../../../ui/forms/SkillGroup";
+import ModalSkillGroup from "../components/ModalSkillGroup/ModalSkillGroup";
 
 import GroupSkill from "../../../../engine/groupSkill";
+import GroupGoalkeeperSkill from "../../../../engine/groupGoalkeeperSkill";
 
 function StepPhysical({
+  position1,
 
-    skills,
+  position2Value,
 
-    handleSkillChange
+  position3Value,
 
-}){
+  skills,
 
-    return(
+  handleSkillChange,
+}) {
+  const groupSkill = position1 === "GK" ? GroupGoalkeeperSkill : GroupSkill;
 
-        <>
-
-            <span className="player-step-title">
-
-                Physical Attributes
-
-            </span>
-
-            <SkillGroup
-
-                title="Physical"
-
-                attributes={GroupSkill.Physical}
-
-                skills={skills}
-
-                handleSkillChange={handleSkillChange}
-
-            />
-
-        </>
-
-    );
-
+  return (
+    <ModalSkillGroup
+      title="Physical"
+      position1={position1}
+      position2={position2Value}
+      position3={position3Value}
+      attributes={groupSkill.Physical}
+      skills={skills}
+      handleSkillChange={handleSkillChange}
+    />
+  );
 }
 
 export default StepPhysical;

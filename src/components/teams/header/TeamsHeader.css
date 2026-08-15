@@ -1,21 +1,25 @@
-.teams-header{
+.teams-header {
+  display: flex;
 
-    margin-bottom:30px;
+  justify-content: space-between;
 
+  align-items: center;
+
+  margin-bottom: 30px;
 }
 
-.teams-header h1{
+.teams-header h1 {
+  color: var(--text);
 
-    color:var(--text);
+  font-size: 34px;
 
-    font-size:34px;
-
-    margin-bottom:8px;
-
+  font-weight: 700;
 }
 
-.teams-header p{
+.teams-header-navigation {
+  display: flex;
 
-    color:var(--text-secondary);
+  align-items: center;
 
+  gap: 10px;
 }

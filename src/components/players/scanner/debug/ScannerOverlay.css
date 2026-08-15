@@ -1,0 +1,97 @@
+.overlay-container {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  user-select: none;
+}
+
+.overlay-container img {
+  width: 100%;
+
+  max-width: 1000px;
+
+  display: block;
+}
+
+.scanner-region {
+  position: absolute;
+
+  border: 3px solid;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  color: white;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+
+  padding: 4px;
+
+  box-sizing: border-box;
+
+  cursor: move;
+}
+
+.scanner-region:hover {
+  filter: brightness(1.15);
+}
+
+.resize-handle {
+  position: absolute;
+
+  width: 14px;
+
+  height: 14px;
+
+  right: -8px;
+
+  bottom: -8px;
+
+  background: white;
+
+  border: 2px solid black;
+
+  border-radius: 50%;
+
+  cursor: nwse-resize;
+}
+
+.name {
+  border-color: #00ff00;
+
+  background: rgba(0, 255, 0, 0.18);
+}
+
+.info {
+  border-color: #00c8ff;
+
+  background: rgba(0, 200, 255, 0.18);
+}
+
+.roles {
+  border-color: #ff00ff;
+
+  background: rgba(255, 0, 255, 0.18);
+}
+
+.attributes {
+  border-color: #ffaa00;
+
+  background: rgba(255, 170, 0, 0.18);
+}
+
+.skills {
+  border-color: #ff0000;
+
+  background: rgba(255, 0, 0, 0.18);
+}

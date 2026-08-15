@@ -1,25 +1,21 @@
-.sidebar-content{
+.sidebar-content {
+  height: 100%;
 
-    height:100%;
+  display: flex;
 
-    display:flex;
+  flex-direction: column;
 
-    flex-direction:column;
+  justify-content: space-between;
 
-    justify-content:space-between;
+  padding: 15px;
 
-    padding:15px;
+  overflow: hidden;
 
-    overflow:hidden;
+  width: 80px;
 
-    width:80px;
-
-    transition:.3s;
-
+  transition: 0.3s;
 }
 
-.sidebar-content.open{
-
-    width:240px;
-
+.sidebar-content.open {
+  width: 240px;
 }

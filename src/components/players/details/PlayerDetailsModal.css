@@ -1,0 +1,51 @@
+.player-details-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 999999;
+}
+
+.player-details-modal {
+  position: relative;
+
+  width: min(1300px, 95vw);
+
+  max-height: 90vh;
+
+  overflow: auto;
+
+  z-index: 1000000;
+}
+
+.player-details-close {
+  position: absolute;
+
+  top: 18px;
+
+  right: 18px;
+
+  z-index: 20;
+}
+
+.player-details-close {
+  position: absolute;
+
+  top: 12px;
+
+  right: 12px;
+}

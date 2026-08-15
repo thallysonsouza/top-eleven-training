@@ -1,49 +1,29 @@
 import "./SkillField.css";
 
 function SkillField({
+  attribute,
 
-    attribute,
+  value,
 
-    value,
+  isKey,
 
-    onChange
+  onChange,
+}) {
+  const label = attribute.charAt(0).toUpperCase() + attribute.slice(1);
 
-}){
+  return (
+    <div className="skill-field">
+      <label className={isKey ? "key-skill" : ""}>{label}</label>
 
-    return(
-
-        <div className="skill-field">
-
-            <label>
-
-                {
-
-                    attribute.charAt(0).toUpperCase()
-
-                    +
-
-                    attribute.slice(1)
-
-                }
-
-            </label>
-
-            <input
-
-                type="number"
-
-                placeholder="0"
-
-                value={value}
-
-                onChange={onChange}
-
-            />
-
-        </div>
-
-    );
-
+      <input
+        type="number"
+        placeholder="0"
+        value={value}
+        onChange={onChange}
+        className={isKey ? "key-input" : ""}
+      />
+    </div>
+  );
 }
 
 export default SkillField;

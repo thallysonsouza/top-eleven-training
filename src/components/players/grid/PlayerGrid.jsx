@@ -1,87 +1,65 @@
 import "./PlayerGrid.css";
-import { UserPlus } from "lucide-react";
+import { UserPlus, ScanSearch } from "lucide-react";
 
 import CreateCard from "../../ui/CreateCard/CreateCard";
 import PlayerCard from "../cards/PlayerCard";
 import TeamLineupCard from "../cards/TeamLineupCard";
 
 function PlayerGrid({
+  players,
 
-    players,
+  onCreate,
 
-    onCreate,
+  onScan,
 
-    onOpen,
+  onOpen,
 
-    onLineup,
+  onLineup,
 
-    onEdit,
+  onEdit,
 
-    onNewSeason,
+  onNewSeason,
 
-    onUndoSeason,
+  onUndoSeason,
 
-    onDelete,
+  onDelete,
 
-    onToggleCheck
+  onToggleCheck,
+}) {
+  return (
+    <section className="player-grid">
+      <TeamLineupCard onOpen={onLineup} />
 
-}){
-
-    return(
-
-        <section className="player-grid">
-
-            <TeamLineupCard
-                onOpen={onLineup}
-            />
-
-            <CreateCard
-                title={
-                    players.length >= 11
-                        ? "Maximum Players"
-                        : "Create Player"
-                }
-                description={
-                    players.length >= 11
-                        ? "11 / 11 Players"
-                        : `${players.length} / 11 Players`
-                }
-                icon={UserPlus}
-                onClick={onCreate}
-            />
-
-            {
-
-                players.map(player=>(
-
-                    <PlayerCard
-
-                        key={player.id}
-
-                        player={player}
-
-                        onOpen={onOpen}
-
-                        onEdit={onEdit}
-
-                        onNewSeason={onNewSeason}
-
-                        onUndoSeason={onUndoSeason}
-
-                        onDelete={onDelete}
-
-                        onToggleCheck={onToggleCheck}
-
-                    />
-
-                ))
-
-            }
-
-        </section>
-
-    );
-
+      <CreateCard
+        title={players.length >= 11 ? "Maximum Players" : "Create Player"}
+        description={
+          players.length >= 11
+            ? "11 / 11 Players"
+            : `${players.length} / 11 Players`
+        }
+        icon={UserPlus}
+        onClick={onCreate}
+      />
+      <CreateCard
+        title="Scan Screenshot"
+        description="Import Top Eleven Player"
+        icon={ScanSearch}
+        onClick={onScan}
+      />
+      {players.map((player) => (
+        <PlayerCard
+          key={player.id}
+          player={player}
+          onOpen={onOpen}
+          onEdit={onEdit}
+          onNewSeason={onNewSeason}
+          onUndoSeason={onUndoSeason}
+          onDelete={onDelete}
+          onToggleCheck={onToggleCheck}
+        />
+      ))}
+    </section>
+  );
 }
 
 export default PlayerGrid;

@@ -1,97 +1,45 @@
 import "./PlayerInfo.css";
-import {
+import { User, CalendarDays, TrendingUp, Star } from "lucide-react";
 
-    User,
-    CalendarDays,
-    TrendingUp,
-    Star
+function PlayerInfo({ player, playerOverall, playerWhiteOverall }) {
+  return (
+    <div className="player-info-panel">
+      <div className="player-info-title">
+        <User size={16} />
 
-} from "lucide-react";
+        <span>PLAYER</span>
+      </div>
 
-function PlayerInfo({
+      <h2>{player.name}</h2>
 
-    player,
-    playerOverall,
-    playerWhiteOverall
+      <div className="player-info-row">
+        <span>
+          <CalendarDays size={15} />
+          Age
+        </span>
 
-}){
+        <strong>{player.age}</strong>
+      </div>
 
-    return(
+      <div className="player-info-row">
+        <span>
+          <TrendingUp size={15} />
+          OVR
+        </span>
 
-        <div className="player-info-panel">
+        <strong>{playerOverall.toFixed(1)}</strong>
+      </div>
 
-            <div className="player-info-title">
+      <div className="player-info-row">
+        <span>
+          <Star size={15} />
+          White OVR
+        </span>
 
-                <User size={16}/>
-
-                <span>PLAYER</span>
-
-            </div>
-
-            <h2>
-
-                {player.name}
-
-            </h2>
-
-            <div className="player-info-row">
-
-                <span>
-
-                    <CalendarDays size={15}/>
-
-                    Age
-
-                </span>
-
-                <strong>
-
-                    {player.age}
-
-                </strong>
-
-            </div>
-
-            <div className="player-info-row">
-
-                <span>
-
-                    <TrendingUp size={15}/>
-
-                    OVR
-
-                </span>
-
-                <strong>
-
-                    {playerOverall}
-
-                </strong>
-
-            </div>
-
-            <div className="player-info-row">
-
-                <span>
-
-                    <Star size={15}/>
-
-                    White OVR
-
-                </span>
-
-                <strong>
-
-                    {playerWhiteOverall}
-
-                </strong>
-
-            </div>
-
-        </div>
-
-    );
-
+        <strong>{playerWhiteOverall.toFixed(1)}</strong>
+      </div>
+    </div>
+  );
 }
 
 export default PlayerInfo;

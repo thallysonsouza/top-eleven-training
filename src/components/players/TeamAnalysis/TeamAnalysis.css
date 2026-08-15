@@ -1,0 +1,21 @@
+.team-analysis {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.team-analysis-grid {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-rows: 1fr 1fr;
+
+  gap: 16px;
+
+  min-height: 0;
+}

@@ -1,28 +1,33 @@
 import KeySkill from "../constants/keySkill";
-import { allGroupSkill } from "./groupSkill";
+import KeyGoalkeeperSkill from "../constants/keyGoalkeeperSkill";
+
+import skill from "../constants/skill";
+import goalkeeperSkill from "../constants/goalkeeperSkill";
 
 export function getKeySkills(position1, position2, position3) {
-
-    const p1 = KeySkill[position1] || KeySkill["---"];
-
-    const p2 = KeySkill[position2] || KeySkill["---"];
-
-    const p3 = KeySkill[position3] || KeySkill["---"];
-
+  if (position1 === "GK") {
     const result = {};
 
-    allGroupSkill.forEach(skill => {
+    const keySkills = KeyGoalkeeperSkill.GK;
 
-        result[skill] =
-
-            p1[skill] ||
-
-            p2[skill] ||
-
-            p3[skill];
-
+    goalkeeperSkill.forEach((attribute) => {
+      result[attribute] = keySkills[attribute];
     });
 
     return result;
+  }
 
+  const p1 = KeySkill[position1] || KeySkill["---"];
+
+  const p2 = KeySkill[position2] || KeySkill["---"];
+
+  const p3 = KeySkill[position3] || KeySkill["---"];
+
+  const result = {};
+
+  skill.forEach((attribute) => {
+    result[attribute] = p1[attribute] || p2[attribute] || p3[attribute];
+  });
+
+  return result;
 }

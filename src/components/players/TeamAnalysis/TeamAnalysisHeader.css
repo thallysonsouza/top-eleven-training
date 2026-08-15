@@ -1,0 +1,21 @@
+.team-analysis-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.team-analysis-header h1 {
+  color: var(--text);
+
+  font-size: 34px;
+}
+
+.team-analysis-header-actions {
+  display: flex;
+
+  gap: 8px;
+}

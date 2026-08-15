@@ -1,0 +1,21 @@
+.team-lineup-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.team-lineup-header h1 {
+  color: var(--text);
+
+  font-size: 34px;
+}
+
+.team-lineup-header-actions {
+  display: flex;
+
+  gap: 8px;
+}

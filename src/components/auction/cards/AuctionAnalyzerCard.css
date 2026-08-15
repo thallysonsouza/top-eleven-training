@@ -1,0 +1,175 @@
+.auction-analyzer-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 28px;
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  border-radius: 18px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  color: var(--text);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.auction-analyzer-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.auction-analyzer-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #ffd700;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.15),
+    0 12px 35px rgba(255, 215, 0, 0.12);
+}
+
+.auction-analyzer-card:active {
+  transform: translateY(-1px);
+}
+
+.auction-analyzer-card-icon {
+  position: relative;
+  z-index: 1;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 215, 0, 0.08);
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  color: #ffd700;
+
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.auction-analyzer-card:hover .auction-analyzer-card-icon {
+  transform: scale(1.06);
+
+  background: rgba(255, 215, 0, 0.12);
+
+  box-shadow: 0 0 22px rgba(255, 215, 0, 0.12);
+}
+
+.auction-analyzer-card-content {
+  position: relative;
+  z-index: 1;
+
+  padding-right: 40px;
+}
+
+.auction-analyzer-card-content h2 {
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+.auction-analyzer-card-content p {
+  max-width: 520px;
+
+  color: #bbbbbb;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+}
+
+.auction-analyzer-card-arrow {
+  position: absolute;
+
+  right: 24px;
+  top: 50%;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #777777;
+
+  transform: translateY(-50%);
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.auction-analyzer-card:hover .auction-analyzer-card-arrow {
+  color: #ffd700;
+
+  transform: translate(4px, -50%);
+}
+
+/* =========================================
+   MANUAL
+========================================= */
+
+.auction-analyzer-card-manual .auction-analyzer-card-icon {
+  color: #ffd700;
+}
+
+/* =========================================
+   SMART
+========================================= */
+
+.auction-analyzer-card-smart .auction-analyzer-card-icon {
+  color: #ffd700;
+}

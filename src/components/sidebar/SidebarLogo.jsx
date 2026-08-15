@@ -2,50 +2,27 @@ import { Shield } from "lucide-react";
 
 import "./SidebarLogo.css";
 
-function SidebarLogo({open,setOpen}){
+function SidebarLogo({ open, setOpen }) {
+  return (
+    <button
+      className={`sidebar-logo ${open ? "open" : ""}`}
+      onClick={() => setOpen(!open)}
+    >
+      <div className="logo-icon">
+        <Shield size={26} />
+      </div>
 
-    return(
+      {open && (
+        <div className="logo-text">
+          <h2>
+            Top Eleven <span>Tools</span>
+          </h2>
 
-        <button
-
-            className="sidebar-logo"
-
-            onClick={()=>setOpen(!open)}
-
-        >
-
-            <div className="logo-icon">
-
-                <Shield size={24}/>
-
-            </div>
-
-            {
-
-                open &&
-
-                <div className="logo-text">
-
-                    <h2>
-
-                        Top Eleven Tools
-
-                    </h2>
-
-                    <span>
-
-                        Professional Platform
-
-                    </span>
-
-                </div>
-
-            }
-
-        </button>
-
-    );
-
+          <small>Professional Platform</small>
+        </div>
+      )}
+    </button>
+  );
 }
 
 export default SidebarLogo;

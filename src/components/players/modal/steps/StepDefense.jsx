@@ -1,36 +1,32 @@
-import SkillGroup from "../../../ui/forms/SkillGroup";
+import ModalSkillGroup from "../components/ModalSkillGroup/ModalSkillGroup";
 
 import GroupSkill from "../../../../engine/groupSkill";
+import GroupGoalkeeperSkill from "../../../../engine/groupGoalkeeperSkill";
 
 function StepDefense({
+  position1,
 
-    skills,
+  position2Value,
 
-    handleSkillChange
+  position3Value,
 
-}){
+  skills,
 
-    return(
+  handleSkillChange,
+}) {
+  const groupSkill = position1 === "GK" ? GroupGoalkeeperSkill : GroupSkill;
 
-        <>
-
-
-            <SkillGroup
-
-                title="Defense"
-
-                attributes={GroupSkill.Defense}
-
-                skills={skills}
-
-                handleSkillChange={handleSkillChange}
-
-            />
-
-        </>
-
-    );
-
+  return (
+    <ModalSkillGroup
+      title="Defense"
+      position1={position1}
+      position2={position2Value}
+      position3={position3Value}
+      attributes={groupSkill.Defense}
+      skills={skills}
+      handleSkillChange={handleSkillChange}
+    />
+  );
 }
 
 export default StepDefense;

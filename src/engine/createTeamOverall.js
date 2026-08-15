@@ -1,26 +1,14 @@
-import createGroupAverage from "./createGroupAverage";
 import calculateAverage from "../util/average";
+import getPlayerDisplayedOverall from "./getPlayerDisplayedOverall";
 
-export default function createTeamOverall(team){
+export default function createTeamOverall(team) {
+  if (!team.players.length) {
+    return 0;
+  }
 
-    if(!team.players.length){
-
-        return 0;
-
-    }
-
-    const overalls = team.players.map(player=>{
-
-        const averages = createGroupAverage(player.skills);
-
-        return averages.overall;
-
-    });
-
-    return Math.round(
-
-        calculateAverage(overalls)
-
-    );
-
+  return Number(
+    calculateAverage(
+      team.players.map((player) => getPlayerDisplayedOverall(player)),
+    ).toFixed(1),
+  );
 }

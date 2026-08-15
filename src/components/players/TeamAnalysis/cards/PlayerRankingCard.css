@@ -1,0 +1,11 @@
+.player-ranking-card {
+  background: var(--panel);
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+}

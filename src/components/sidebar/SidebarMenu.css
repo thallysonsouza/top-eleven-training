@@ -1,105 +1,149 @@
-.sidebar-top{
+.sidebar-top {
+  display: flex;
 
-    display:flex;
-
-    flex-direction:column;
-
+  flex-direction: column;
 }
 
-.menu-button{
+.sidebar-top nav {
+  display: flex;
 
-    width:48px;
-    height:48px;
+  flex-direction: column;
 
-    border:none;
-
-    background:transparent;
-
-    color:var(--text);
-
-    cursor:pointer;
-
-    margin-bottom:20px;
-
-    border-radius:12px;
-
-    transition:.25s;
-
+  gap: 10px;
 }
 
-.menu-button:hover{
+/* ========================= */
+/* LINKS */
+/* ========================= */
 
-    background:var(--card-hover);
+.sidebar-top nav a {
+  position: relative;
 
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 48px;
+
+  padding: 12px 14px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  color: var(--text-secondary);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.22s,
+    background 0.22s,
+    border-color 0.22s,
+    color 0.22s,
+    box-shadow 0.22s;
+
+  border: 1px solid transparent;
 }
 
-.sidebar-top nav{
+/* brilho dourado */
 
-    display:flex;
+.sidebar-top nav a::before {
+  content: "";
 
-    flex-direction:column;
+  position: absolute;
 
-    gap:8px;
+  inset: 0;
 
+  background: radial-gradient(
+    circle at left,
+
+    rgba(255, 215, 0, 0.1),
+    transparent 70%
+  );
+
+  opacity: 0;
+
+  transition: 0.25s;
+
+  pointer-events: none;
 }
 
-.sidebar-top nav a{
+/* ========================= */
+/* HOVER */
+/* ========================= */
 
-    display:flex;
+.sidebar-top nav a:hover {
+  transform: translateX(4px);
 
-    align-items:center;
+  color: #ffffff;
 
-    gap:14px;
+  background: linear-gradient(
+    180deg,
+    #2b2b2b 0%,
 
-    padding:12px;
+    #232323 100%
+  );
 
-    border-radius:12px;
+  border-color: rgba(255, 215, 0, 0.18);
 
-    text-decoration:none;
-
-    color:var(--text-secondary);
-
-    transition:.25s;
-
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.08),
+    0 8px 20px rgba(255, 215, 0, 0.08);
 }
 
-.sidebar-top nav a:hover{
-
-    background:var(--card-hover);
-
-    color:var(--text);
-
+.sidebar-top nav a:hover::before {
+  opacity: 1;
 }
 
-.sidebar-top nav a.active{
+/* ========================= */
+/* ITEM ATIVO */
+/* ========================= */
 
-    background:var(--primary);
+.sidebar-top nav a.active {
+  background: linear-gradient(
+    180deg,
+    #ffd700 0%,
 
-    color:#111;
+    #e8bf00 100%
+  );
 
-    font-weight:600;
+  color: #111;
 
+  font-weight: 700;
+
+  border-color: #ffd700;
+
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.25);
 }
 
-.sidebar-top nav a.active svg{
-
-    color:#111;
-
+.sidebar-top nav a.active svg {
+  color: #111;
 }
 
-.sidebar{
+/* ========================= */
+/* ÍCONES */
+/* ========================= */
 
-    width:100%;
-    height:100%;
+.sidebar-top nav svg {
+  flex-shrink: 0;
 
-    background:var(--sidebar);
+  transition: 0.25s;
+}
 
-    border:1px solid var(--border);
+.sidebar-top nav a:hover svg {
+  transform: scale(1.08);
+}
 
-    border-radius:var(--radius-medium);
+/* ========================= */
+/* TEXTO */
+/* ========================= */
 
-    box-shadow:var(--shadow);
+.sidebar-top nav span {
+  white-space: nowrap;
 
-    overflow:hidden;
+  font-size: 15px;
 
+  font-weight: 600;
 }

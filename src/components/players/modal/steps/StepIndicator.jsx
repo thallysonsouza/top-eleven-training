@@ -1,105 +1,62 @@
 import "./StepIndicator.css";
 
-function StepIndicator({
+import { User, MapPinned, Shield, Swords, Dumbbell, Check } from "lucide-react";
 
-    step,
+const steps = [
+  {
+    label: "Info",
+    icon: User,
+  },
+  {
+    label: "Position",
+    icon: MapPinned,
+  },
+  {
+    label: "Defense",
+    icon: Shield,
+  },
+  {
+    label: "Attack",
+    icon: Swords,
+  },
+  {
+    label: "Physical",
+    icon: Dumbbell,
+  },
+];
 
-    totalSteps
+function StepIndicator({ step }) {
+  return (
+    <div className="step-indicator">
+      {steps.map((item, index) => {
+        const current = index + 1;
 
-}){
+        const completed = current < step;
 
-    return(
+        const active = current === step;
 
-        <div className="step-indicator">
+        const Icon = item.icon;
 
-            {
+        return (
+          <div key={current} className="step-item">
+            <div
+              className={`step-circle
+                ${completed ? "completed" : ""}
+                ${active ? "active" : ""}`}
+            >
+              {completed ? <Check size={18} /> : <Icon size={18} />}
+            </div>
 
-                Array.from({
+            <small className="step-label">{item.label}</small>
 
-                    length:totalSteps
-
-                }).map((_,index)=>{
-
-                    const current=index+1;
-
-                    const active=current<=step;
-
-                    return(
-
-                        <div
-
-                            key={current}
-
-                            className="step-item"
-
-                        >
-
-                            <div
-
-                                className={
-
-                                    `step-circle ${
-
-                                        active
-
-                                        ?
-
-                                        "active"
-
-                                        :
-
-                                        ""
-
-                                    }`
-
-                                }
-
-                            >
-
-                                {current}
-
-                            </div>
-
-                            {
-
-                                current<totalSteps &&
-
-                                <div
-
-                                    className={
-
-                                        `step-line ${
-
-                                            current<step
-
-                                            ?
-
-                                            "active"
-
-                                            :
-
-                                            ""
-
-                                        }`
-
-                                    }
-
-                                />
-
-                            }
-
-                        </div>
-
-                    );
-
-                })
-
-            }
-
-        </div>
-
-    );
-
+            {current < steps.length && (
+              <div className={`step-line ${completed ? "active" : ""}`} />
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default StepIndicator;

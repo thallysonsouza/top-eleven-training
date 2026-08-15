@@ -1,91 +1,137 @@
-.sidebar-logo{
+.sidebar-logo {
+  width: 100%;
 
-    width:100%;
+  height: 56px;
 
-    display:flex;
+  display: flex;
 
-    align-items:center;
+  align-items: center;
 
-    gap:14px;
+  justify-content: center;
 
-    margin-bottom:25px;
+  gap: 16px;
 
-    padding:0px;
+  margin-bottom: 28px;
 
-    border:none;
+  padding: 0;
 
-    background:transparent;
+  border: none;
 
-    border-radius:14px;
+  background: transparent;
 
-    cursor:pointer;
+  border-radius: 18px;
 
-    transition:.25s;
+  cursor: pointer;
 
+  transition: 0.25s;
 }
 
-.sidebar-logo:hover{
+/* Quando a sidebar estiver aberta */
 
-    background:var(--card-hover);
+.sidebar-logo.open {
+  justify-content: flex-start;
 
+  padding: 8px;
 }
 
-.logo-icon{
-
-    width:48px;
-
-    height:48px;
-
-    border-radius:14px;
-
-    background:var(--primary);
-
-    color:#111;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-shrink:0;
-
-    transition:.25s;
-
+.sidebar-logo:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
+  );
 }
 
-.sidebar-logo:hover .logo-icon{
+/* ============================= */
+/* Ícone */
+/* ============================= */
 
-    transform:scale(1.08);
+.logo-icon {
+  width: 52px;
 
+  height: 52px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  color: #111;
+
+  background: linear-gradient(180deg, #ffd700 0%, #e0b800 100%);
+
+  border: 1px solid rgba(255, 215, 0, 0.45);
+
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.22);
+
+  transition: 0.25s;
 }
 
-.logo-text{
+.sidebar-logo:hover .logo-icon {
+  transform: scale(1.06);
 
-    display:flex;
-
-    flex-direction:column;
-
-    text-align:left;
-
+  box-shadow: 0 0 26px rgba(255, 215, 0, 0.3);
 }
 
-.logo-text h2{
+/* ============================= */
+/* Texto */
+/* ============================= */
 
-    color:var(--text);
+.logo-text {
+  display: flex;
 
-    font-size:16px;
+  flex-direction: column;
 
-    font-weight:700;
+  justify-content: center;
 
-    line-height:1.1;
+  text-align: left;
 
+  animation: logoFade 0.25s ease;
 }
 
-.logo-text span{
+.logo-text h2 {
+  color: #ffffff;
 
-    color:var(--text-muted);
+  font-size: 17px;
 
-    font-size:12px;
+  font-weight: 700;
 
+  line-height: 1.15;
+
+  letter-spacing: 0.3px;
+}
+
+.logo-text h2 span {
+  color: #ffd700;
+}
+
+.logo-text small {
+  color: #9b9b9b;
+
+  font-size: 12px;
+
+  margin-top: 4px;
+
+  letter-spacing: 0.4px;
+}
+
+/* ============================= */
+
+@keyframes logoFade {
+  from {
+    opacity: 0;
+
+    transform: translateX(-8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
 }

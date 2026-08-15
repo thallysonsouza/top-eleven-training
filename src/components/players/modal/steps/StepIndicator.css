@@ -1,75 +1,143 @@
-.step-indicator{
+.step-indicator {
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: flex-start;
 
-    align-items:center;
-
-    padding:24px 28px;
-
+  padding: 28px 40px;
 }
 
-.step-item{
+.step-item {
+  width: 100px;
 
-    display:flex;
+  display: flex;
 
-    align-items:center;
+  flex-direction: column;
 
+  align-items: center;
+
+  position: relative;
+
+  flex-shrink: 0;
 }
 
-.step-circle{
+.step-circle {
+  width: 44px;
 
-    width:40px;
+  height: 44px;
 
-    height:40px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
 
-    font-weight:700;
+  border: 1px solid rgba(255, 215, 0, 0.18);
 
-    background:var(--card-hover);
+  color: #8c8c8c;
 
-    border:2px solid var(--border);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background 0.25s;
 
-    color:var(--text-secondary);
-
-    transition:.25s;
-
-    z-index:2;
-
+  z-index: 2;
 }
 
-.step-circle.active{
-
-    background:var(--primary);
-
-    border-color:var(--primary);
-
-    color:white;
-
+.step-circle:hover {
+  transform: scale(1.05);
 }
 
-.step-line{
+.step-circle.completed {
+  background: #ffd700;
 
-    width:60px;
+  border-color: #ffd700;
 
-    height:4px;
+  color: #111;
 
-    background:var(--border);
-
-    transition:.25s;
-
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
 }
 
-.step-line.active{
+.step-circle.active {
+  background: linear-gradient(180deg, #ffe36d, #ffd700);
 
-    background:var(--primary);
+  border-color: #ffd700;
 
+  color: #111;
+
+  transform: scale(1.12);
+
+  animation: stepPop 0.25s ease;
+
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.28);
+}
+
+.step-label {
+  margin-top: 12px;
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.4px;
+
+  color: #bdbdbd;
+
+  transition: 0.25s;
+}
+
+.step-circle.active + .step-label {
+  color: #ffd700;
+}
+
+.step-circle.completed + .step-label {
+  color: #ffffff;
+}
+
+.step-line {
+  position: absolute;
+
+  top: 22px;
+
+  left: 72px;
+
+  width: 56px;
+
+  height: 3px;
+
+  background: #343434;
+
+  transition: 0.25s;
+}
+
+.step-line.active {
+  background: linear-gradient(90deg, #ffd700, #ffe36d);
+
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+@keyframes stepPop {
+  0% {
+    transform: scale(0.85);
+  }
+
+  60% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1.12);
+  }
 }

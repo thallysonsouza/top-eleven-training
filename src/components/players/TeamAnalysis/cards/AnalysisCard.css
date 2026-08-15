@@ -1,0 +1,77 @@
+.analysis-card {
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  box-shadow: var(--shadow);
+}
+
+.analysis-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.analysis-card h2 {
+  position: relative;
+
+  padding-left: 18px;
+
+  margin-bottom: 22px;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.analysis-card h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 10px;
+
+  height: 2px;
+
+  background: #ffd700;
+}
+
+.analysis-card-body {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}

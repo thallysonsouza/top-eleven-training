@@ -1,73 +1,87 @@
 import { getTeamById, updatePlayers } from "../../../../services/teamStorage";
 
-export function increasePlayer(teamId, playerId){
+const MAX_PROGRESS = 10;
 
-    const team = getTeamById(teamId);
+function increaseSkills(skills) {
+  const updated = {};
 
-    if(!team) return;
+  Object.entries(skills).forEach(([key, value]) => {
+    updated[key] = Number(value) + 1;
+  });
 
-    const players = team.players.map(player=>{
-
-        if(player.id !== playerId){
-
-            return player;
-
-        }
-
-        const newSkills = {};
-
-        Object.entries(player.skills).forEach(([key,value])=>{
-
-            newSkills[key] = Number(value) + 1;
-
-        });
-
-        return{
-
-            ...player,
-
-            skills:newSkills
-
-        };
-
-    });
-
-    updatePlayers(teamId, players);
-
+  return updated;
 }
 
-export function decreasePlayer(teamId, playerId){
+function decreaseSkills(skills) {
+  const updated = {};
 
-    const team = getTeamById(teamId);
+  Object.entries(skills).forEach(([key, value]) => {
+    updated[key] = Number(value) - 1;
+  });
 
-    if(!team) return;
+  return updated;
+}
 
-    const players = team.players.map(player=>{
+export function increasePlayer(teamId, playerId) {
+  const team = getTeamById(teamId);
 
-        if(player.id !== playerId){
+  if (!team) return;
 
-            return player;
+  const players = team.players.map((player) => {
+    if (player.id !== playerId) {
+      return player;
+    }
 
-        }
+    let progress = (player.overallProgress ?? 0) + 1;
 
-        const newSkills = {};
+    let skills = player.skills;
 
-        Object.entries(player.skills).forEach(([key,value])=>{
+    if (progress >= MAX_PROGRESS) {
+      progress = 0;
 
-            newSkills[key] = Number(value) - 1;
+      skills = increaseSkills(skills);
+    }
 
-        });
+    return {
+      ...player,
 
-        return{
+      overallProgress: progress,
 
-            ...player,
+      skills,
+    };
+  });
 
-            skills:newSkills
+  updatePlayers(teamId, players);
+}
 
-        };
+export function decreasePlayer(teamId, playerId) {
+  const team = getTeamById(teamId);
 
-    });
+  if (!team) return;
 
-    updatePlayers(teamId, players);
+  const players = team.players.map((player) => {
+    if (player.id !== playerId) {
+      return player;
+    }
 
+    let progress = (player.overallProgress ?? 0) - 1;
+
+    let skills = player.skills;
+
+    if (progress < 0) {
+      progress = MAX_PROGRESS - 1;
+
+      skills = decreaseSkills(skills);
+    }
+
+    return {
+      ...player,
+
+      overallProgress: progress,
+
+      skills,
+    };
+  });
+
+  updatePlayers(teamId, players);
 }

@@ -1,61 +1,31 @@
 import "./SelectField.css";
 
+import { ChevronDown } from "lucide-react";
+
 function SelectField({
+  label,
 
-    label,
+  options,
 
-    value,
+  ...props
+}) {
+  return (
+    <div className="select-field">
+      <label>{label}</label>
 
-    options,
+      <div className="select-wrapper">
+        <select {...props}>
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
 
-    onChange
-
-}){
-
-    return(
-
-        <div className="select-field">
-
-            <label>
-
-                {label}
-
-            </label>
-
-            <select
-
-                value={value}
-
-                onChange={onChange}
-
-            >
-
-                {
-
-                    options.map(option=>(
-
-                        <option
-
-                            key={option}
-
-                            value={option}
-
-                        >
-
-                            {option}
-
-                        </option>
-
-                    ))
-
-                }
-
-            </select>
-
-        </div>
-
-    );
-
+        <ChevronDown size={18} className="select-arrow" />
+      </div>
+    </div>
+  );
 }
 
 export default SelectField;

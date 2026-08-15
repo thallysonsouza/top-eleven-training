@@ -1,0 +1,138 @@
+.team-balance-card {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  padding: 18px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(37, 37, 37, 0.96),
+    rgba(27, 27, 27, 0.96)
+  );
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.team-balance-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.05),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.team-balance-card h2 {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 14px;
+}
+
+.team-balance-score {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: baseline;
+
+  gap: 4px;
+
+  margin-top: 2px;
+}
+
+.team-balance-value {
+  font-size: 36px;
+
+  font-weight: 800;
+
+  color: white;
+
+  line-height: 1;
+}
+
+.team-balance-max {
+  color: #bdbdbd;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  margin-bottom: 0;
+}
+
+.team-balance-divider {
+  height: 1px;
+
+  margin: 12px 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.28),
+    transparent
+  );
+}
+
+.team-balance-stats {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  flex: 1;
+
+  justify-content: center;
+}
+
+.team-balance-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: white;
+
+  font-size: 14px;
+
+  line-height: 1.15;
+}
+
+.team-balance-row span:first-child {
+  color: var(--text-secondary);
+
+  font-weight: 500;
+}
+
+.team-balance-row span:last-child {
+  font-weight: 700;
+
+  color: #ffffff;
+}

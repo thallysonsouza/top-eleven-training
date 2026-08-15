@@ -1,91 +1,73 @@
-.team-lineup-card{
+.team-lineup-card {
+  height: 150px;
 
-    height:160px;
+  display: flex;
 
-    display:flex;
+  flex-direction: column;
 
-    flex-direction:column;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  gap: 5px;
 
-    gap:5px;
+  border: none;
 
-    border:none;
+  cursor: pointer;
 
-    cursor:pointer;
+  border-radius: 18px;
 
-    border-radius:18px;
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
 
-    background:
-        linear-gradient(
-            180deg,
-            #252525 0%,
-            #1b1b1b 100%
-        );
+  border: 1px solid rgba(255, 215, 0, 0.18);
 
-    border:1px solid rgba(255,215,0,.18);
+  transition: 0.25s;
 
-    transition:.25s;
+  position: relative;
 
-    position:relative;
-
-    overflow:hidden;
-
+  overflow: hidden;
 }
 
-.team-lineup-card::before{
+.team-lineup-card::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  inset: 0;
 
-    inset:0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.08),
+    transparent 70%
+  );
 
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(255,215,0,.08),
-            transparent 70%
-        );
-
-    pointer-events:none;
-
+  pointer-events: none;
 }
 
-.team-lineup-card:hover{
+.team-lineup-card:hover {
+  transform: translateY(-4px);
 
-    transform:translateY(-4px);
+  border-color: #ffd700;
 
-    border-color:#FFD700;
-
-    box-shadow:
-        0 0 0 1px rgba(255,215,0,.15),
-        0 12px 35px rgba(255,215,0,.12);
-
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.15),
+    0 12px 35px rgba(255, 215, 0, 0.12);
 }
 
-.team-lineup-card svg{
-
-    color:#FFD700;
-
+.team-lineup-card svg {
+  color: #ffd700;
 }
 
-.team-lineup-card h3{
+.team-lineup-card h3 {
+  color: #ffffff;
 
-    color:#ffffff;
+  font-size: 20px;
 
-    font-size:20px;
-
-    font-weight:700;
-
+  font-weight: 700;
 }
 
-.team-lineup-card span{
+.team-lineup-card span {
+  color: #b5b5b5;
 
-    color:#b5b5b5;
-
-    font-size:13px;
-
+  font-size: 13px;
 }
