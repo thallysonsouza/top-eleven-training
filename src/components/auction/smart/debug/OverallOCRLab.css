@@ -1,0 +1,509 @@
+.overall-ocr-lab {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.overall-ocr-lab-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.overall-ocr-lab-header small {
+  color: var(--primary);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.overall-ocr-lab-header h2 {
+  margin: 5px 0 0;
+
+  color: var(--text);
+
+  font-size: 21px;
+}
+
+.overall-ocr-lab-header p {
+  margin: 6px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+/* =========================
+   TEST BUTTON
+========================= */
+
+.overall-ocr-lab-test {
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background: var(--card);
+
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.overall-ocr-lab-test:hover:not(:disabled) {
+  background: var(--card-hover);
+
+  border-color: var(--primary);
+
+  color: var(--primary);
+}
+
+.overall-ocr-lab-test:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   SPINNER
+========================= */
+
+.overall-ocr-lab-spinner {
+  animation: overall-ocr-lab-spin 1s linear infinite;
+}
+
+@keyframes overall-ocr-lab-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.overall-ocr-lab-error {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--card);
+
+  color: var(--danger);
+
+  font-size: 12px;
+}
+
+/* =========================
+   PANEL
+========================= */
+
+.overall-ocr-lab-panel {
+  padding: 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: var(--card);
+}
+
+/* =========================
+   PANEL HEADER
+========================= */
+
+.overall-ocr-lab-panel-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 16px;
+}
+
+.overall-ocr-lab-panel-header small {
+  color: var(--primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.overall-ocr-lab-panel-header h3 {
+  margin: 4px 0 0;
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+/* =========================
+   RESET
+========================= */
+
+.overall-ocr-lab-reset {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.overall-ocr-lab-reset:hover {
+  border-color: var(--primary);
+
+  color: var(--primary);
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.overall-ocr-lab-controls {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.overall-ocr-lab-controls label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.overall-ocr-lab-controls label > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overall-ocr-lab-controls span {
+  color: var(--text-secondary);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.overall-ocr-lab-controls strong {
+  color: var(--text);
+
+  font-size: 12px;
+}
+
+.overall-ocr-lab-controls input[type="range"] {
+  width: 100%;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+
+.overall-ocr-lab-options {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid var(--border);
+}
+
+.overall-ocr-lab-options label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.overall-ocr-lab-summary {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.overall-ocr-lab-summary > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 13px 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--card);
+}
+
+.overall-ocr-lab-summary span {
+  color: var(--text-secondary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.overall-ocr-lab-summary strong {
+  color: var(--text);
+
+  font-size: 20px;
+}
+
+/* =========================
+   OCR RESULTS
+========================= */
+
+.overall-ocr-lab-results-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.overall-ocr-lab-results-list article {
+  padding: 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--card);
+}
+
+.overall-ocr-lab-results-list article.valid {
+  border-left: 3px solid var(--primary);
+}
+
+.overall-ocr-lab-results-list article.invalid {
+  border-left: 3px solid var(--danger);
+}
+
+/* =========================
+   ROW TITLE
+========================= */
+
+.overall-ocr-lab-row-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 11px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.overall-ocr-lab-row-title strong {
+  color: var(--text);
+
+  font-size: 12px;
+}
+
+.overall-ocr-lab-results-list article.valid .overall-ocr-lab-row-title svg {
+  color: var(--primary);
+}
+
+.overall-ocr-lab-results-list article.invalid .overall-ocr-lab-row-title svg {
+  color: var(--danger);
+}
+
+/* =========================
+   ROW VALUES
+========================= */
+
+.overall-ocr-lab-row-values {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+
+  padding-top: 12px;
+}
+
+.overall-ocr-lab-row-values > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.overall-ocr-lab-row-values small {
+  color: var(--text-secondary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.overall-ocr-lab-row-values strong {
+  min-height: 20px;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  word-break: break-word;
+}
+
+.overall-ocr-lab-row-values span {
+  color: var(--text-secondary);
+
+  font-size: 10px;
+}
+
+/* =========================
+   INVALID
+========================= */
+
+.overall-ocr-lab-results-list
+  article.invalid
+  .overall-ocr-lab-row-values
+  > div:last-child
+  strong {
+  color: var(--danger);
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.overall-ocr-lab-empty {
+  min-height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: 1px dashed var(--border);
+
+  border-radius: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .overall-ocr-lab-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overall-ocr-lab-row-values {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .overall-ocr-lab-header {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .overall-ocr-lab-test {
+    width: 100%;
+  }
+
+  .overall-ocr-lab-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .overall-ocr-lab-summary {
+    grid-template-columns: 1fr;
+  }
+}

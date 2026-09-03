@@ -1,0 +1,24 @@
+.smart-auction-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.smart-auction-header h1 {
+  color: var(--text);
+
+  font-size: 34px;
+
+  font-weight: 700;
+}
+
+.smart-auction-header-navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}

@@ -1,0 +1,736 @@
+.smart-auction-analysis-manager {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  color: var(--text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.smart-auction-analysis-header {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 2px 2px;
+}
+
+.smart-auction-analysis-header small {
+  color: #ffd700;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.smart-auction-analysis-header h2 {
+  margin-top: 3px;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  line-height: 1.1;
+}
+
+.smart-auction-analysis-header p {
+  margin-top: 4px;
+
+  color: #bbbbbb;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.smart-auction-analysis-account {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 135px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.smart-auction-analysis-account:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.smart-auction-analysis-account span {
+  color: #888888;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+.smart-auction-analysis-account strong {
+  color: #ffd700;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+/* =========================
+   SMART TARGET STATUS
+========================= */
+
+.smart-auction-target-status {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 1.7fr)
+    115px
+    minmax(150px, 1fr)
+    125px
+    105px;
+
+  gap: 7px;
+}
+
+.smart-auction-target-status::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.035),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+.smart-auction-target-status > div {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 48px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3px;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgba(255, 215, 0, 0.12);
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.smart-auction-target-status > div:hover {
+  transform: translateY(-1px);
+
+  border-color: rgba(255, 215, 0, 0.3);
+
+  background: linear-gradient(180deg, #292929 0%, #1d1d1d 100%);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.05),
+    0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.smart-auction-target-status span {
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+.smart-auction-target-status strong {
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   TARGET STATUS HIGHLIGHTS
+========================= */
+
+.smart-auction-target-status > div:first-child {
+  border-color: rgba(255, 215, 0, 0.18);
+}
+
+.smart-auction-target-status > div:first-child strong {
+  color: #ffd700;
+}
+
+.smart-auction-target-status > div:nth-child(2) strong {
+  color: #ffd700;
+}
+
+.smart-auction-target-status > div:nth-child(4) strong {
+  color: #ffffff;
+}
+
+/* =========================
+   PLAYERS
+========================= */
+
+.smart-auction-players {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+/* =========================
+   PLAYER
+========================= */
+
+.smart-auction-player {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: stretch;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 11px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.smart-auction-player:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(255, 215, 0, 0.18);
+
+  background: linear-gradient(180deg, #292929 0%, #1d1d1d 100%);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.04),
+    0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================
+   PLAYER DATA
+========================= */
+
+.smart-auction-player-data {
+  flex: 1;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    35px
+    minmax(120px, 1.6fr)
+    58px
+    58px
+    100px;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+}
+
+.smart-auction-player-number {
+  color: #777777;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.smart-auction-player-position {
+  overflow: hidden;
+
+  color: #ffd700;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  transition: color 0.2s ease;
+}
+
+/* =========================
+   PLAYER STAT
+========================= */
+
+.smart-auction-player-stat {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.smart-auction-player-stat span {
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.smart-auction-player-stat strong {
+  overflow: hidden;
+
+  color: #eeeeee;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   ANALYSIS
+========================= */
+
+.smart-auction-player-analysis {
+  min-width: 390px;
+
+  display: grid;
+
+  grid-template-columns:
+    90px
+    75px
+    105px
+    90px;
+
+  align-items: stretch;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(255, 215, 0, 0.018);
+}
+
+.smart-auction-player-analysis > div {
+  min-width: 0;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  padding: 7px 9px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.smart-auction-player-analysis > div:first-child {
+  border-left: none;
+}
+
+.smart-auction-player-analysis span {
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.smart-auction-player-analysis strong {
+  overflow: hidden;
+
+  color: #eeeeee;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   SCORE
+========================= */
+
+.smart-auction-player-analysis > div:nth-child(2) strong {
+  color: #ffffff;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+.smart-auction-player-analysis > div:nth-child(3) strong {
+  color: #ffffff;
+}
+
+/* =========================
+   TARGET
+========================= */
+
+.smart-auction-player-analysis > div:last-child strong {
+  color: #666666;
+}
+
+/* =========================
+   TARGET APPROVED
+========================= */
+
+.target-approved {
+  color: #ffd700 !important;
+
+  font-weight: 800 !important;
+
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.16);
+}
+
+/* =========================
+   TARGET REJECTED
+========================= */
+
+.target-rejected {
+  color: #666666 !important;
+}
+
+/* =========================
+   TARGET MATCH
+========================= */
+
+.smart-auction-player.target-match {
+  border-color: rgba(255, 215, 0, 0.65);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.12),
+    0 0 22px rgba(255, 215, 0, 0.08),
+    0 8px 28px rgba(0, 0, 0, 0.22);
+}
+
+.smart-auction-player.target-match::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at left center,
+    rgba(255, 215, 0, 0.07),
+    transparent 55%
+  );
+
+  pointer-events: none;
+}
+
+.smart-auction-player.target-match .smart-auction-player-position {
+  color: #ffd700;
+
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.12);
+}
+
+.smart-auction-player.target-match .smart-auction-player-analysis {
+  background: rgba(255, 215, 0, 0.035);
+}
+
+/* =========================
+   TARGET MATCH LABEL
+========================= */
+
+.smart-auction-player.target-match
+  .smart-auction-player-analysis
+  > div:last-child {
+  background: rgba(255, 215, 0, 0.035);
+}
+
+.smart-auction-player.target-match
+  .smart-auction-player-analysis
+  > div:last-child
+  span {
+  color: rgba(255, 215, 0, 0.55);
+}
+
+/* =========================
+   WAITING STATE
+========================= */
+
+.smart-auction-analysis-manager .smart-auction-player span {
+  color: #999999;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1250px) {
+  .smart-auction-target-status {
+    grid-template-columns:
+      minmax(180px, 1.5fr)
+      100px
+      minmax(130px, 1fr)
+      110px
+      90px;
+  }
+
+  .smart-auction-player-analysis {
+    min-width: 360px;
+
+    grid-template-columns:
+      82px
+      68px
+      95px
+      85px;
+  }
+}
+
+/* =========================
+   TABLET / SMALL DESKTOP
+========================= */
+
+@media (max-width: 1100px) {
+  .smart-auction-player {
+    flex-direction: column;
+  }
+
+  .smart-auction-player-analysis {
+    min-width: 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-left: none;
+  }
+
+  .smart-auction-player-analysis > div:first-child {
+    border-left: none;
+  }
+
+  .smart-auction-target-status {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .smart-auction-target-status > div:first-child {
+    grid-column: span 2;
+  }
+}
+
+/* =========================
+   SMALL DESKTOP
+========================= */
+
+@media (max-width: 900px) {
+  .smart-auction-analysis-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .smart-auction-analysis-account {
+    align-self: flex-start;
+  }
+
+  .smart-auction-target-status {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .smart-auction-target-status > div:first-child {
+    grid-column: span 2;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .smart-auction-player-data {
+    grid-template-columns:
+      30px
+      minmax(100px, 1fr)
+      55px
+      55px;
+
+    gap: 6px;
+
+    padding: 8px;
+  }
+
+  .smart-auction-player-stat:last-child {
+    grid-column: 2 / -1;
+  }
+
+  .smart-auction-player-analysis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .smart-auction-player-analysis > div:nth-child(3) {
+    border-left: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.055);
+  }
+
+  .smart-auction-player-analysis > div:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.055);
+  }
+
+  .smart-auction-target-status {
+    grid-template-columns: 1fr;
+  }
+
+  .smart-auction-target-status > div:first-child {
+    grid-column: auto;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .smart-auction-target-status {
+    gap: 5px;
+  }
+
+  .smart-auction-target-status > div {
+    min-height: 42px;
+
+    padding: 6px 8px;
+  }
+
+  .smart-auction-player-data {
+    grid-template-columns:
+      28px
+      1fr
+      50px
+      50px;
+  }
+
+  .smart-auction-player-position {
+    font-size: 11px;
+  }
+
+  .smart-auction-player-stat strong {
+    font-size: 9px;
+  }
+}

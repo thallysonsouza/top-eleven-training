@@ -1,0 +1,437 @@
+.training-configuration {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 13px;
+
+  border: 1px solid rgba(255, 215, 0, 0.13);
+
+  border-radius: 13px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  box-shadow:
+    0 6px 22px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.training-configuration::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.04),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.training-configuration-header {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 9px;
+}
+
+.training-configuration-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.training-configuration-icon {
+  width: 34px;
+
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 215, 0, 0.18);
+
+  border-radius: 9px;
+
+  background: rgba(255, 215, 0, 0.055);
+
+  color: #ffd700;
+}
+
+.training-configuration-title small {
+  display: block;
+
+  color: #ffd700;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.training-configuration-title h2 {
+  margin-top: 1px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+/* =========================
+   RESET
+========================= */
+
+.training-configuration-reset {
+  width: 30px;
+
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #777777;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.training-configuration-reset:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: rgba(255, 215, 0, 0.04);
+
+  color: #ffd700;
+}
+
+/* =========================
+   CONFIGURATION ROW
+========================= */
+
+.training-configuration-row {
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 1.65fr)
+    minmax(120px, 0.85fr)
+    minmax(120px, 0.85fr)
+    auto;
+
+  gap: 8px;
+
+  align-items: end;
+}
+
+.training-configuration-field {
+  min-width: 0;
+}
+
+.training-configuration-field label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #eeeeee;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   SELECT
+========================= */
+
+.training-configuration-select {
+  position: relative;
+}
+
+.training-configuration-select select {
+  width: 100%;
+
+  height: 38px;
+
+  padding: 0 31px 0 10px;
+
+  appearance: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-configuration-select select:hover {
+  border-color: rgba(255, 215, 0, 0.16);
+}
+
+.training-configuration-select select:focus {
+  border-color: rgba(255, 215, 0, 0.55);
+
+  background: #151515;
+
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.07);
+}
+
+.training-configuration-select svg {
+  position: absolute;
+
+  top: 50%;
+
+  right: 9px;
+
+  transform: translateY(-50%);
+
+  color: #777777;
+
+  pointer-events: none;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.training-configuration-input {
+  position: relative;
+}
+
+.training-configuration-input input {
+  width: 100%;
+
+  height: 38px;
+
+  padding: 0 44px 0 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-configuration-input input:hover {
+  border-color: rgba(255, 215, 0, 0.16);
+}
+
+.training-configuration-input input:focus {
+  border-color: rgba(255, 215, 0, 0.55);
+
+  background: #151515;
+
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.07);
+}
+
+.training-configuration-input span {
+  position: absolute;
+
+  top: 50%;
+
+  right: 10px;
+
+  transform: translateY(-50%);
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  pointer-events: none;
+}
+
+/* =========================
+   SIMULATE
+========================= */
+
+.training-configuration-simulate {
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border: 1px solid #ffd700;
+
+  border-radius: 8px;
+
+  background: linear-gradient(180deg, #ffd700 0%, #e6bf00 100%);
+
+  color: #111111;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 16px rgba(255, 215, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-configuration-simulate:hover {
+  transform: translateY(-1px);
+
+  filter: brightness(1.06);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.08),
+    0 8px 22px rgba(255, 215, 0, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   INFO
+========================= */
+
+.training-configuration-info {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 5px;
+
+  color: #777777;
+}
+
+.training-configuration-info span {
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.training-configuration-info strong {
+  color: #999999;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .training-configuration-row {
+    grid-template-columns:
+      1.4fr
+      1fr
+      1fr;
+  }
+
+  .training-configuration-simulate {
+    grid-column: 1 / -1;
+
+    justify-self: end;
+  }
+}
+
+@media (max-width: 600px) {
+  .training-configuration-row {
+    grid-template-columns: 1fr;
+  }
+
+  .training-configuration-simulate {
+    width: 100%;
+  }
+}

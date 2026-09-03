@@ -1,0 +1,636 @@
+.auction-scanner-debug-manager {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* =========================
+   COMPACT HEADER
+========================= */
+
+.auction-scanner-debug-manager-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+.auction-scanner-debug-manager-title {
+  min-width: 0;
+}
+
+.auction-scanner-debug-manager-header small {
+  color: var(--primary);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+}
+
+.auction-scanner-debug-manager-header h2 {
+  margin: 2px 0 0;
+
+  color: var(--text);
+
+  font-size: 20px;
+
+  line-height: 1.1;
+}
+
+.auction-scanner-debug-manager-header p {
+  margin: 3px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+/* =========================
+   HEADER ACTIONS
+========================= */
+
+.auction-scanner-debug-manager-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   TEST BUTTON
+========================= */
+
+.auction-scanner-debug-manager-test {
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: var(--card);
+
+  color: var(--text);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.auction-scanner-debug-manager-test:hover:not(:disabled) {
+  background: var(--card-hover);
+
+  border-color: var(--primary);
+
+  color: var(--primary);
+}
+
+.auction-scanner-debug-manager-test:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.auction-scanner-debug-manager-status {
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: var(--card);
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  flex-shrink: 0;
+}
+
+.auction-scanner-debug-manager-status svg {
+  width: 15px;
+
+  height: 15px;
+
+  color: var(--primary);
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   SPINNER
+========================= */
+
+.auction-scanner-debug-manager-spinner {
+  animation: auction-scanner-debug-manager-spin 1s linear infinite;
+}
+
+@keyframes auction-scanner-debug-manager-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.auction-scanner-debug-manager-error {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: var(--card);
+
+  color: var(--danger);
+
+  font-size: 10px;
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.auction-scanner-debug-manager-results {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.auction-scanner-debug-manager-result {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 12px;
+
+  align-content: start;
+
+  padding: 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--card);
+
+  overflow: hidden;
+}
+
+/* =========================
+   RESULT HEADER
+========================= */
+
+.auction-scanner-debug-manager-result-header {
+  min-height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  grid-column: 1 / -1;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.auction-scanner-debug-manager-result-header small {
+  color: var(--primary);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.auction-scanner-debug-manager-result-header h3 {
+  margin: 2px 0 0;
+
+  color: var(--text);
+
+  font-size: 13px;
+
+  line-height: 1.1;
+}
+
+.auction-scanner-debug-manager-result-header svg {
+  width: 17px;
+
+  height: 17px;
+
+  color: var(--primary);
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   PLAYER VALIDATION STATUS
+========================= */
+
+.auction-scanner-debug-manager-player-status {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  grid-column: 1 / -1;
+
+  min-height: 24px;
+
+  padding: 4px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.auction-scanner-debug-manager-player-status span {
+  color: var(--primary);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.auction-scanner-debug-manager-player-status span.invalid {
+  color: var(--danger);
+}
+
+.auction-scanner-debug-manager-player-status span.valid {
+  color: var(--primary);
+}
+
+.auction-scanner-debug-manager-player-status small {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: var(--text-secondary);
+
+  font-size: 7px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   VALID PLAYER CARD
+========================= */
+
+.auction-scanner-debug-manager-result.player-valid {
+  border-color: var(--border);
+}
+
+/* =========================
+   INVALID PLAYER CARD
+========================= */
+
+.auction-scanner-debug-manager-result.player-invalid {
+  border-color: var(--border);
+}
+
+.auction-scanner-debug-manager-result.player-invalid
+  .auction-scanner-debug-manager-result-header
+  svg {
+  color: var(--danger);
+}
+
+/* =========================
+   OCR FIELDS
+========================= */
+
+.auction-scanner-debug-manager-field {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 7px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+/*
+ * Os quatro campos ocupam duas
+ * colunas:
+ *
+ * POSITION      | AGE
+ * OVERALL       | MARKET VALUE
+ */
+
+.auction-scanner-debug-manager-field:nth-last-child(4),
+.auction-scanner-debug-manager-field:nth-last-child(3),
+.auction-scanner-debug-manager-field:nth-last-child(2),
+.auction-scanner-debug-manager-field:nth-last-child(1) {
+  min-width: 0;
+}
+
+/* =========================
+   FIELD HEADER
+========================= */
+
+.auction-scanner-debug-manager-field-header {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 6px;
+}
+
+.auction-scanner-debug-manager-field-header span {
+  color: var(--text-secondary);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.auction-scanner-debug-manager-field-header strong {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: var(--text);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-align: right;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   FIELD INFO
+========================= */
+
+.auction-scanner-debug-manager-field-info {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 4px;
+}
+
+.auction-scanner-debug-manager-field-info span {
+  padding: 2px 4px;
+
+  border-radius: 4px;
+
+  background: var(--card-hover);
+
+  color: var(--text-secondary);
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+.auction-scanner-debug-manager-field-info span.valid {
+  color: var(--primary);
+}
+
+.auction-scanner-debug-manager-field-info span.invalid {
+  color: var(--danger);
+}
+
+/* =========================
+   RAW OCR
+========================= */
+
+.auction-scanner-debug-manager-raw {
+  max-width: 100%;
+
+  overflow: hidden;
+
+  color: var(--text-secondary);
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   FIELD BORDERS
+========================= */
+
+/*
+ * Como agora existe o bloco
+ * PLAYER VALID / INVALID entre
+ * o header e os campos, não usamos
+ * mais nth-child() para definir
+ * a posição dos campos.
+ *
+ * A organização é feita pelo grid
+ * naturalmente.
+ */
+
+.auction-scanner-debug-manager-field:nth-last-child(2),
+.auction-scanner-debug-manager-field:nth-last-child(1) {
+  border-bottom: none;
+
+  padding-bottom: 2px;
+}
+
+/* =========================
+   LARGE SCREEN
+========================= */
+
+@media (min-width: 1400px) {
+  .auction-scanner-debug-manager-results {
+    gap: 8px;
+  }
+
+  .auction-scanner-debug-manager-result {
+    padding: 9px;
+  }
+
+  .auction-scanner-debug-manager-field {
+    padding: 6px 0;
+  }
+
+  .auction-scanner-debug-manager-field-header strong {
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .auction-scanner-debug-manager-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 850px) {
+  .auction-scanner-debug-manager-results {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-scanner-debug-manager-result {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .auction-scanner-debug-manager-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+  }
+
+  .auction-scanner-debug-manager-actions {
+    width: 100%;
+  }
+
+  .auction-scanner-debug-manager-test,
+  .auction-scanner-debug-manager-status {
+    flex: 1;
+  }
+
+  .auction-scanner-debug-manager-results {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-scanner-debug-manager-result {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .auction-scanner-debug-manager-player-status {
+    width: 100%;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+  .auction-scanner-debug-manager-result {
+    padding: 9px;
+  }
+
+  .auction-scanner-debug-manager-result-header h3 {
+    font-size: 12px;
+  }
+
+  .auction-scanner-debug-manager-field-header strong {
+    font-size: 11px;
+  }
+
+  .auction-scanner-debug-manager-field-info span {
+    font-size: 6px;
+  }
+}

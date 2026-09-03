@@ -1,0 +1,301 @@
+.auction-scanner-debug {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* =========================
+   STAGE
+========================= */
+
+.auction-scanner-debug-stage {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: #000;
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   IMAGE WRAPPER
+========================= */
+
+.auction-scanner-debug-image-wrapper {
+  position: relative;
+
+  width: fit-content;
+
+  max-width: 100%;
+
+  display: block;
+
+  margin: 0 auto;
+
+  line-height: 0;
+}
+
+.auction-scanner-debug-image-wrapper img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 480px;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+/* =========================
+   FIXED OCR REGION
+========================= */
+
+.auction-scanner-debug-region {
+  position: absolute;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid var(--primary);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: var(--text);
+
+  pointer-events: none;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   REGION LABEL
+========================= */
+
+.auction-scanner-debug-region span {
+  position: absolute;
+
+  top: 5px;
+  left: 5px;
+
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  color: var(--text);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+/* =========================
+   REGION INFORMATION
+========================= */
+
+.auction-scanner-debug-information {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+/* =========================
+   REGION CARD
+========================= */
+
+.auction-scanner-debug-region-card {
+  min-width: 0;
+
+  padding: 13px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 11px;
+
+  background: var(--card);
+
+  color: var(--text);
+}
+
+/* =========================
+   REGION TITLE
+========================= */
+
+.auction-scanner-debug-region-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.auction-scanner-debug-region-title strong {
+  color: var(--text);
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   REGION VALUES
+========================= */
+
+.auction-scanner-debug-region-values {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 10px;
+}
+
+.auction-scanner-debug-region-values span {
+  padding: 4px 6px;
+
+  border-radius: 5px;
+
+  background: var(--card-hover);
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.auction-scanner-debug-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+.auction-scanner-debug-footer span {
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  background: var(--card-hover);
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.auction-scanner-debug-empty {
+  min-height: 360px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.auction-scanner-debug-empty-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 18px;
+
+  background: var(--card-hover);
+
+  color: var(--primary);
+}
+
+.auction-scanner-debug-empty h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 20px;
+}
+
+.auction-scanner-debug-empty p {
+  max-width: 430px;
+
+  margin-top: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .auction-scanner-debug-information {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .auction-scanner-debug-information {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-scanner-debug-stage {
+    padding: 10px;
+  }
+}

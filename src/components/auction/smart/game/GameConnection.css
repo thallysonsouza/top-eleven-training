@@ -1,0 +1,893 @@
+.game-connection {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  color: var(--text);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.game-connection-title {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.game-connection-title small {
+  color: #ffd700;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.game-connection-title h2 {
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  line-height: 1.15;
+}
+
+.game-connection-title p {
+  margin-top: 6px;
+
+  color: #bbbbbb;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.game-connection-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(255, 215, 0, 0.12);
+
+  border-radius: 9px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  color: #888888;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  white-space: nowrap;
+}
+
+.game-connection-status span,
+.game-connection-live-status span {
+  width: 7px;
+
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #666666;
+}
+
+.game-connection-status.connected {
+  border-color: rgba(255, 215, 0, 0.3);
+
+  color: #ffd700;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.04),
+    0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+.game-connection-status.connected span,
+.game-connection-live-status span {
+  background: #ffd700;
+
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.45);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.game-connection-content {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 215, 0, 0.14);
+
+  border-radius: 17px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.game-connection-content::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top center,
+    rgba(255, 215, 0, 0.045),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   DISCONNECTED
+========================= */
+
+.game-connection-empty {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  min-height: 360px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.game-connection-icon {
+  width: 68px;
+
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 19px;
+
+  border: 1px solid rgba(255, 215, 0, 0.16);
+
+  border-radius: 17px;
+
+  background: rgba(255, 215, 0, 0.055);
+
+  color: #ffd700;
+
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.game-connection-empty:hover .game-connection-icon {
+  transform: scale(1.05);
+
+  background: rgba(255, 215, 0, 0.085);
+
+  border-color: rgba(255, 215, 0, 0.3);
+
+  box-shadow:
+    0 0 24px rgba(255, 215, 0, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.game-connection-empty h3 {
+  margin-bottom: 7px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1px;
+}
+
+.game-connection-empty p {
+  max-width: 420px;
+
+  margin-bottom: 23px;
+
+  color: #aaaaaa;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  font-weight: 500;
+}
+
+/* =========================
+   CONNECT BUTTON
+========================= */
+
+.game-connection-connect {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  height: 43px;
+
+  padding: 0 20px;
+
+  border: 1px solid #ffd700;
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #ffd700 0%, #e6bf00 100%);
+
+  color: #111111;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 20px rgba(255, 215, 0, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.game-connection-connect:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.06);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.12),
+    0 10px 28px rgba(255, 215, 0, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.game-connection-connect:active {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.game-connection-error {
+  margin-top: 14px;
+
+  color: var(--danger);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   LIVE GAME
+========================= */
+
+.game-connection-live {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #050505;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.game-connection-video-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 0;
+
+  max-height: 360px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: radial-gradient(circle at center, #151515 0%, #050505 65%);
+
+  overflow: hidden;
+}
+
+.game-connection-video-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border: 1px solid rgba(255, 215, 0, 0.04);
+
+  pointer-events: none;
+}
+
+.game-connection-live video {
+  display: block;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  max-height: 360px;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================
+   LIVE BAR
+========================= */
+
+.game-connection-live-bar {
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 8px 12px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  border-top: 1px solid rgba(255, 215, 0, 0.12);
+
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   MONITOR INFO
+========================= */
+
+.game-connection-monitor-info {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.game-connection-live-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #eeeeee;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.game-connection-countdown {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 215, 0, 0.16);
+
+  border-radius: 8px;
+
+  background: rgba(255, 215, 0, 0.045);
+
+  color: #888888;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.game-connection-countdown:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+
+  background: rgba(255, 215, 0, 0.065);
+}
+
+.game-connection-countdown svg {
+  color: #ffd700;
+
+  flex-shrink: 0;
+}
+
+.game-connection-countdown strong {
+  color: #ffd700;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  font-variant-numeric: tabular-nums;
+
+  letter-spacing: 0.4px;
+
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.08);
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.game-connection-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+.game-connection-frame,
+.game-connection-disconnect {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  height: 34px;
+
+  padding: 0 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #999999;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.game-connection-frame:hover,
+.game-connection-disconnect:hover {
+  transform: translateY(-1px);
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border-color: rgba(255, 215, 0, 0.2);
+
+  color: #ffffff;
+}
+
+/* =========================
+   CONNECTED HEADER
+========================= */
+
+.game-connection-connected-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 0 2px;
+}
+
+.game-connection-connected-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #eeeeee;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.game-connection-connected-label span {
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ffd700;
+
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.45);
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.game-connection-toast {
+  position: fixed;
+
+  right: 28px;
+
+  bottom: 28px;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 15px;
+
+  border: 1px solid rgba(255, 215, 0, 0.2);
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  color: #eeeeee;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.035),
+    0 12px 35px rgba(0, 0, 0, 0.4);
+
+  animation: game-connection-toast-in 0.2s ease-out;
+}
+
+.game-connection-toast-icon {
+  width: 20px;
+
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 215, 0, 0.12);
+
+  border: 1px solid rgba(255, 215, 0, 0.25);
+
+  color: #ffd700;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+@keyframes game-connection-toast-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   START / STOP BUTTONS
+========================= */
+
+.game-connection-start,
+.game-connection-stop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  height: 34px;
+
+  padding: 0 15px;
+
+  border: 1px solid #ffd700;
+
+  border-radius: 8px;
+
+  background: linear-gradient(180deg, #ffd700 0%, #e6bf00 100%);
+
+  color: #111111;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 14px rgba(255, 215, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.game-connection-start:hover,
+.game-connection-stop:hover {
+  transform: translateY(-1px);
+
+  filter: brightness(1.06);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.08),
+    0 7px 20px rgba(255, 215, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.game-connection-start:active,
+.game-connection-stop:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   STOP
+========================= */
+
+.game-connection-stop {
+  border-color: rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #bbbbbb;
+
+  box-shadow: none;
+}
+
+.game-connection-stop:hover {
+  background: rgba(255, 215, 0, 0.05);
+
+  border-color: rgba(255, 215, 0, 0.25);
+
+  color: #ffd700;
+
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.05);
+}
+
+/* =========================
+   LIVE ERROR
+========================= */
+
+.game-connection-live-error {
+  padding: 8px 12px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: #1b1b1b;
+
+  color: var(--danger);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-align: right;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .game-connection-live-bar {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .game-connection-monitor-info {
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .game-connection-actions {
+    width: 100%;
+  }
+
+  .game-connection-frame,
+  .game-connection-disconnect,
+  .game-connection-start,
+  .game-connection-stop {
+    flex: 1;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .game-connection-title {
+    flex-direction: column;
+  }
+
+  .game-connection-monitor-info {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .game-connection-countdown {
+    justify-content: center;
+  }
+
+  .game-connection-actions {
+    width: 100%;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .game-connection-title h2 {
+    font-size: 20px;
+  }
+
+  .game-connection-empty {
+    min-height: 320px;
+
+    padding: 24px;
+  }
+
+  .game-connection-empty h3 {
+    font-size: 17px;
+  }
+
+  .game-connection-empty p {
+    font-size: 12px;
+  }
+
+  .game-connection-actions {
+    flex-wrap: wrap;
+  }
+
+  .game-connection-toast {
+    right: 16px;
+
+    bottom: 16px;
+
+    left: 16px;
+
+    justify-content: center;
+  }
+}

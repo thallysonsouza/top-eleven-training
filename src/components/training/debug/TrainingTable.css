@@ -1,0 +1,597 @@
+/* =========================================================
+   SHARED TRAINING TABLE
+========================================================= */
+
+.training-engine-table {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 14px;
+
+  border: 1px solid rgba(255, 215, 0, 0.13);
+
+  border-radius: 13px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  overflow: hidden;
+}
+
+.training-engine-table::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.04),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.training-engine-table-header {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+.training-engine-table-header small {
+  display: block;
+
+  color: #ffd700;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.9px;
+}
+
+.training-engine-table-header h2 {
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.training-engine-table-header p {
+  margin-top: 3px;
+
+  color: #858585;
+
+  font-size: 9px;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   PLAYER TYPE
+========================================================= */
+
+.training-engine-table-type {
+  min-width: 105px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 215, 0, 0.13);
+
+  border-radius: 8px;
+
+  background: rgba(255, 215, 0, 0.035);
+}
+
+.training-engine-table-type span {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-table-type strong {
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   POSITION / SUMMARY CARDS
+========================================================= */
+
+.training-engine-table-positions {
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 7px;
+
+  margin-bottom: 8px;
+}
+
+.training-engine-table-positions > div {
+  min-width: 0;
+
+  min-height: 48px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.training-engine-table-positions span {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-table-positions strong {
+  overflow: hidden;
+
+  color: #ffd700;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   RESULT BOX
+========================================================= */
+
+.training-engine-table-result {
+  position: relative;
+
+  z-index: 1;
+
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 8px;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgba(255, 215, 0, 0.14);
+
+  border-radius: 8px;
+
+  background: rgba(255, 215, 0, 0.035);
+}
+
+.training-engine-table-result > div {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.training-engine-table-result span {
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-table-result strong {
+  overflow: hidden;
+
+  color: #ffd700;
+
+  font-family: monospace;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   OPERATION
+========================================================= */
+
+.training-engine-table-operation {
+  position: relative;
+
+  z-index: 1;
+
+  min-height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 6px 10px;
+
+  margin-bottom: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.training-engine-table-operation span {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-table-operation strong {
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   FINAL RESULT
+========================================================= */
+
+.training-engine-table-final-result {
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    72px;
+
+  gap: 7px;
+
+  margin-bottom: 8px;
+}
+
+.training-engine-table-final-result > div {
+  min-width: 0;
+
+  min-height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255, 215, 0, 0.15);
+
+  border-radius: 8px;
+
+  background: rgba(255, 215, 0, 0.035);
+}
+
+.training-engine-table-final-result span {
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-table-final-result strong {
+  overflow: hidden;
+
+  color: #ffd700;
+
+  font-family: monospace;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   SKILLS PANEL
+========================================================= */
+
+.training-engine-skills-panel {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SKILLS HEADER
+========================================================= */
+
+.training-engine-skills-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    50px
+    minmax(0, 1fr)
+    50px
+    minmax(0, 1fr)
+    50px;
+
+  align-items: center;
+
+  min-height: 30px;
+
+  padding: 0 9px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.training-engine-skills-header span {
+  color: #707070;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-skills-header span:nth-child(2),
+.training-engine-skills-header span:nth-child(4),
+.training-engine-skills-header span:nth-child(6) {
+  text-align: center;
+}
+
+/* =========================================================
+   SKILL GRID
+========================================================= */
+
+.training-engine-skills-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+
+  grid-auto-flow: column;
+
+  min-height: 0;
+}
+
+/* =========================================================
+   SKILL ITEM
+========================================================= */
+
+.training-engine-skill-item {
+  min-width: 0;
+
+  min-height: 34px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    50px;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 9px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+  transition: background 0.2s ease;
+}
+
+.training-engine-skill-item:hover {
+  background: rgba(255, 215, 0, 0.025);
+}
+
+.training-engine-skill-item > span {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #a5a5a5;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.training-engine-skill-item > strong {
+  width: 27px;
+
+  height: 21px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  justify-self: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #666666;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+.training-engine-skill-item > strong.active {
+  border-color: rgba(255, 215, 0, 0.18);
+
+  background: rgba(255, 215, 0, 0.07);
+
+  color: #ffd700;
+
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.05);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .training-engine-table {
+    padding: 11px;
+  }
+
+  .training-engine-table-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .training-engine-table-type {
+    align-items: flex-start;
+  }
+
+  .training-engine-table-positions {
+    grid-template-columns: 1fr;
+  }
+
+  .training-engine-table-final-result {
+    grid-template-columns: 1fr;
+  }
+
+  .training-engine-skills-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    grid-auto-flow: row;
+  }
+
+  .training-engine-skills-header {
+    display: none;
+  }
+}

@@ -1,0 +1,432 @@
+.scanner-configuration {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.scanner-configuration-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 24px;
+}
+
+.scanner-configuration-header small {
+  color: var(--primary);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   RESOLUTION
+========================= */
+
+.scanner-configuration-resolution {
+  padding: 7px 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   FRAME
+========================= */
+
+.scanner-configuration-stage {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #000;
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  cursor: crosshair;
+
+  user-select: none;
+}
+
+/*
+ * A imagem e a seleção ficam
+ * dentro do mesmo wrapper.
+ *
+ * Isso garante que a seleção
+ * use exatamente a mesma área
+ * visual da imagem.
+ */
+
+.scanner-configuration-image-wrapper {
+  position: relative;
+
+  display: block;
+
+  width: fit-content;
+
+  max-width: 100%;
+
+  height: fit-content;
+
+  line-height: 0;
+
+  cursor: crosshair;
+
+  user-select: none;
+}
+
+.scanner-configuration-image-wrapper img {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  max-height: 390px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+/* =========================
+   SELECTION
+========================= */
+
+.scanner-configuration-selection {
+  position: absolute;
+
+  border: 2px solid var(--primary);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.45);
+
+  pointer-events: none;
+}
+
+.scanner-configuration-selection-info {
+  position: absolute;
+
+  top: 6px;
+
+  left: 6px;
+
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: var(--primary);
+
+  color: #111;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.scanner-configuration-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.scanner-configuration-coordinates {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+.scanner-configuration-coordinates span {
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  background: var(--card-hover);
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.scanner-configuration-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.scanner-configuration-reset,
+.scanner-configuration-save {
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 13px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.scanner-configuration-reset {
+  border: 1px solid var(--border);
+
+  background: transparent;
+
+  color: var(--text-secondary);
+}
+
+.scanner-configuration-reset:hover:not(:disabled) {
+  background: var(--card-hover);
+
+  color: var(--text);
+}
+
+.scanner-configuration-save {
+  border: none;
+
+  background: var(--primary);
+
+  color: #111;
+}
+
+.scanner-configuration-save:hover:not(:disabled) {
+  filter: brightness(1.08);
+
+  transform: translateY(-1px);
+}
+
+.scanner-configuration-reset:disabled,
+.scanner-configuration-save:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.scanner-configuration-toast {
+  position: fixed;
+
+  right: 28px;
+
+  bottom: 28px;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--card);
+
+  color: var(--text);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  animation: scanner-configuration-toast-in 0.2s ease-out;
+}
+
+.scanner-configuration-toast-icon {
+  width: 20px;
+
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #39d353;
+
+  color: #111;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+@keyframes scanner-configuration-toast-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.scanner-configuration-empty {
+  min-height: 360px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.scanner-configuration-empty-icon {
+  width: 72px;
+
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 18px;
+
+  background: var(--card-hover);
+
+  color: var(--primary);
+}
+
+.scanner-configuration-empty h2 {
+  color: var(--text);
+
+  font-size: 20px;
+}
+
+.scanner-configuration-empty p {
+  max-width: 420px;
+
+  margin-top: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .scanner-configuration-header,
+  .scanner-configuration-footer {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .scanner-configuration-actions {
+    width: 100%;
+  }
+
+  .scanner-configuration-reset,
+  .scanner-configuration-save {
+    flex: 1;
+
+    justify-content: center;
+  }
+}

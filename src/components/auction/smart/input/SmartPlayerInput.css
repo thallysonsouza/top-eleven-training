@@ -1,0 +1,83 @@
+.smart-player-input {
+  width: 100%;
+
+  padding: 24px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.smart-player-input-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.smart-player-input-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 214, 0, 0.25);
+
+  border-radius: 12px;
+
+  background: var(--card-hover);
+
+  color: var(--primary);
+}
+
+.smart-player-input-header h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.smart-player-input-header p {
+  margin-top: 4px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+/* =========================
+   FIELDS
+========================= */
+
+.smart-player-input-fields {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .smart-player-input-fields {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,475 @@
+/* =========================================================
+   TABLE 2 — EXERCISE GRID
+========================================================= */
+
+.training-engine-exercise-table {
+  position: relative;
+
+  z-index: 1;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 8px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   EXERCISE COLUMN
+========================================================= */
+
+.training-engine-exercise-column {
+  min-width: 0;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 9px;
+
+  background: rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   COLUMN HEADER
+========================================================= */
+
+.training-engine-exercise-column-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(120px, 0.9fr)
+    45px;
+
+  align-items: center;
+
+  min-height: 31px;
+
+  padding: 0 8px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.training-engine-exercise-column-header span {
+  color: #707070;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+
+  white-space: nowrap;
+}
+
+.training-engine-exercise-column-header span:nth-child(2),
+.training-engine-exercise-column-header span:nth-child(3) {
+  text-align: center;
+}
+
+/* =========================================================
+   COLUMN LIST
+========================================================= */
+
+.training-engine-exercise-column-list {
+  min-height: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.training-engine-exercise-column-row {
+  min-width: 0;
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(120px, 0.9fr)
+    45px;
+
+  align-items: center;
+
+  min-height: 0;
+
+  padding: 0 8px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+  transition: background 0.2s ease;
+}
+
+.training-engine-exercise-column-row:last-child {
+  border-bottom: none;
+}
+
+.training-engine-exercise-column-row:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* =========================================================
+   EXERCISE NAME
+========================================================= */
+
+.training-engine-exercise-column-name {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.training-engine-exercise-column-number {
+  width: 17px;
+
+  flex-shrink: 0;
+
+  color: #5f5f5f;
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.training-engine-exercise-column-icon {
+  width: 22px;
+
+  height: 22px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-engine-exercise-column-icon svg {
+  stroke-width: 2.2;
+}
+
+/* =========================================================
+   EXERCISE TEXT
+========================================================= */
+
+.training-engine-exercise-column-name > span:last-child {
+  min-width: 0;
+
+  overflow: hidden;
+
+  font-size: 8px;
+
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  transition: color 0.2s ease;
+}
+
+/* =========================================================
+   CATEGORY — ATTACK
+========================================================= */
+
+.training-engine-exercise-column-name.attack > span:last-child {
+  color: #ff6b6b;
+}
+
+.training-engine-exercise-column-name.attack
+  .training-engine-exercise-column-icon {
+  border-color: rgba(255, 82, 82, 0.24);
+
+  background: rgba(255, 82, 82, 0.07);
+
+  color: #ff5c5c;
+}
+
+.training-engine-exercise-column-row:hover
+  .training-engine-exercise-column-name.attack
+  .training-engine-exercise-column-icon {
+  border-color: rgba(255, 82, 82, 0.4);
+
+  background: rgba(255, 82, 82, 0.11);
+
+  box-shadow: 0 0 10px rgba(255, 82, 82, 0.07);
+}
+
+/* =========================================================
+   CATEGORY — DEFENSE
+========================================================= */
+
+.training-engine-exercise-column-name.defense > span:last-child {
+  color: #64df86;
+}
+
+.training-engine-exercise-column-name.defense
+  .training-engine-exercise-column-icon {
+  border-color: rgba(50, 213, 131, 0.24);
+
+  background: rgba(50, 213, 131, 0.07);
+
+  color: #39d353;
+}
+
+.training-engine-exercise-column-row:hover
+  .training-engine-exercise-column-name.defense
+  .training-engine-exercise-column-icon {
+  border-color: rgba(50, 213, 131, 0.4);
+
+  background: rgba(50, 213, 131, 0.11);
+
+  box-shadow: 0 0 10px rgba(50, 213, 131, 0.07);
+}
+
+/* =========================================================
+   CATEGORY — POSSESSION
+========================================================= */
+
+.training-engine-exercise-column-name.possession > span:last-child {
+  color: #ffd84d;
+}
+
+.training-engine-exercise-column-name.possession
+  .training-engine-exercise-column-icon {
+  border-color: rgba(255, 215, 0, 0.24);
+
+  background: rgba(255, 215, 0, 0.07);
+
+  color: #ffd700;
+}
+
+.training-engine-exercise-column-row:hover
+  .training-engine-exercise-column-name.possession
+  .training-engine-exercise-column-icon {
+  border-color: rgba(255, 215, 0, 0.4);
+
+  background: rgba(255, 215, 0, 0.11);
+
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.07);
+}
+
+/* =========================================================
+   CATEGORY — PHYSICAL
+========================================================= */
+
+.training-engine-exercise-column-name.fitness > span:last-child {
+  color: #69b8ff;
+}
+
+.training-engine-exercise-column-name.fitness
+  .training-engine-exercise-column-icon {
+  border-color: rgba(72, 168, 255, 0.24);
+
+  background: rgba(72, 168, 255, 0.07);
+
+  color: #55aaff;
+}
+
+.training-engine-exercise-column-row:hover
+  .training-engine-exercise-column-name.fitness
+  .training-engine-exercise-column-icon {
+  border-color: rgba(72, 168, 255, 0.4);
+
+  background: rgba(72, 168, 255, 0.11);
+
+  box-shadow: 0 0 10px rgba(72, 168, 255, 0.07);
+}
+
+/* =========================================================
+   BINARY
+========================================================= */
+
+.training-engine-exercise-column-binary {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #ffd700;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.65px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   SUM
+========================================================= */
+
+.training-engine-exercise-column-sum {
+  width: 24px;
+
+  height: 21px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  justify-self: center;
+
+  border: 1px solid rgba(255, 215, 0, 0.12);
+
+  border-radius: 6px;
+
+  background: rgba(255, 215, 0, 0.04);
+
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   CATEGORY LEGEND
+========================================================= */
+
+.training-engine-exercise-legend {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 7px;
+}
+
+.training-engine-exercise-legend-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 700;
+}
+
+.training-engine-exercise-legend-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.training-engine-exercise-legend-dot.attack {
+  background: #ff5c5c;
+
+  box-shadow: 0 0 6px rgba(255, 82, 82, 0.45);
+}
+
+.training-engine-exercise-legend-dot.defense {
+  background: #39d353;
+
+  box-shadow: 0 0 6px rgba(50, 213, 131, 0.45);
+}
+
+.training-engine-exercise-legend-dot.possession {
+  background: #ffd700;
+
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.45);
+}
+
+.training-engine-exercise-legend-dot.fitness {
+  background: #55aaff;
+
+  box-shadow: 0 0 6px rgba(72, 168, 255, 0.45);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .training-engine-exercise-table {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .training-engine-exercise-column:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .training-engine-exercise-table {
+    grid-template-columns: 1fr;
+
+    overflow-y: auto;
+  }
+
+  .training-engine-exercise-column:last-child {
+    grid-column: auto;
+  }
+
+  .training-engine-exercise-column {
+    min-height: 260px;
+  }
+}

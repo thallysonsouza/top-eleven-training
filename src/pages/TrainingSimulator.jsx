@@ -1,9 +1,7 @@
+import TrainingSimulatorContent from "../components/Training/simulator/TrainingSimulatorContent";
+
 function TrainingSimulator() {
-  return (
-    <div>
-      <h1>Training Simulator</h1>
-    </div>
-  );
+  return <TrainingSimulatorContent />;
 }
 
 export default TrainingSimulator;

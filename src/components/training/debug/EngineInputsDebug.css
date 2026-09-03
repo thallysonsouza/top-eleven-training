@@ -1,0 +1,667 @@
+/* =========================================================
+   ENGINE INPUTS
+========================================================= */
+
+.training-engine-inputs {
+  position: relative;
+
+  flex-shrink: 0;
+
+  padding: 13px;
+
+  border: 1px solid rgba(255, 215, 0, 0.13);
+
+  border-radius: 13px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  box-shadow:
+    0 6px 22px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  overflow: hidden;
+}
+
+.training-engine-inputs::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.045),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.training-engine-inputs-header {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+.training-engine-inputs-header small {
+  display: block;
+
+  color: #ffd700;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.9px;
+}
+
+.training-engine-inputs-header h2 {
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.training-engine-inputs-header p {
+  margin-top: 3px;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.training-engine-inputs-reset {
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.training-engine-inputs-reset:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: rgba(255, 215, 0, 0.04);
+
+  color: #ffd700;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.training-engine-inputs-section-title {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 6px;
+}
+
+.training-engine-inputs-section-title span {
+  color: #ffd700;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+.training-engine-inputs-section-title small {
+  color: #555555;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   POSITIONS SECTION
+========================================================= */
+
+.training-engine-inputs-position-section {
+  position: relative;
+
+  z-index: 1;
+
+  margin-bottom: 9px;
+}
+
+.training-engine-inputs-grid.positions {
+  display: grid;
+
+  grid-template-columns:
+    100px
+    100px
+    100px
+    minmax(130px, 1fr);
+
+  gap: 7px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   BASIC FIELD
+========================================================= */
+
+.training-engine-input-field {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.training-engine-input-field label {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-input-field select {
+  width: 100%;
+
+  height: 30px;
+
+  padding: 0 8px;
+
+  appearance: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-engine-input-field select:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: #151515;
+}
+
+.training-engine-input-field select:focus {
+  border-color: rgba(255, 215, 0, 0.5);
+
+  background: #151515;
+
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.06);
+}
+
+.training-engine-input-field.disabled {
+  opacity: 0.45;
+}
+
+.training-engine-input-field.disabled select {
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   PLAYER TYPE
+========================================================= */
+
+.training-engine-input-type {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 215, 0, 0.14);
+
+  border-radius: 8px;
+
+  background: rgba(255, 215, 0, 0.035);
+}
+
+.training-engine-input-type span {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-input-type strong {
+  color: #ffd700;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   INITIAL SKILLS
+========================================================= */
+
+.training-engine-inputs-skills-section {
+  position: relative;
+
+  z-index: 1;
+
+  padding-top: 8px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.training-engine-inputs-skills-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 7px;
+}
+
+.training-engine-inputs-skill-group {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 5px;
+
+  padding: 7px;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   SKILL FIELD
+========================================================= */
+
+.training-engine-input-skill-field {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.training-engine-input-skill-field label {
+  width: 100%;
+
+  overflow: hidden;
+
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.training-engine-input-skill-field input {
+  width: 100%;
+
+  height: 29px;
+
+  padding: 0 4px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-engine-input-skill-field input:hover {
+  border-color: rgba(255, 215, 0, 0.16);
+
+  background: #151515;
+}
+
+.training-engine-input-skill-field input:focus {
+  border-color: rgba(255, 215, 0, 0.5);
+
+  background: #151515;
+
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.06);
+}
+
+/* =========================================================
+   REMOVE NUMBER SPINNER
+========================================================= */
+
+.training-engine-input-skill-field input::-webkit-outer-spin-button,
+.training-engine-input-skill-field input::-webkit-inner-spin-button {
+  margin: 0;
+
+  appearance: none;
+}
+
+.training-engine-input-skill-field input[type="number"] {
+  appearance: textfield;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .training-engine-inputs-grid.positions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .training-engine-input-type {
+    min-height: 47px;
+  }
+
+  .training-engine-inputs-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .training-engine-inputs-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .training-engine-inputs-grid.positions {
+    grid-template-columns: 1fr;
+  }
+
+  .training-engine-inputs-skill-group {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 4px;
+  }
+
+  .training-engine-input-skill-field label {
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   TRAINING PARAMETERS
+========================================================= */
+
+.training-engine-inputs-parameters-section {
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: 9px;
+
+  padding-top: 8px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.training-engine-inputs-parameters-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 7px;
+}
+
+/* =========================================================
+   PARAMETER FIELD
+========================================================= */
+
+.training-engine-input-parameter-field {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.training-engine-input-parameter-field label {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-input-parameter-field input {
+  width: 100%;
+
+  height: 30px;
+
+  padding: 0 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-engine-input-parameter-field input:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: #151515;
+}
+
+.training-engine-input-parameter-field input:focus {
+  border-color: rgba(255, 215, 0, 0.45);
+
+  background: #151515;
+
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.06);
+}
+
+/* =========================================================
+   FIXED PARAMETERS
+========================================================= */
+
+.training-engine-input-parameter-field.fixed {
+  border-color: rgba(255, 215, 0, 0.12);
+
+  background: rgba(255, 215, 0, 0.025);
+}
+
+.training-engine-input-parameter-field.fixed strong {
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 215, 0, 0.08);
+
+  border-radius: 7px;
+
+  background: rgba(255, 215, 0, 0.025);
+
+  color: #ffd700;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   REMOVE NUMBER SPINNER
+========================================================= */
+
+.training-engine-input-parameter-field input::-webkit-outer-spin-button,
+.training-engine-input-parameter-field input::-webkit-inner-spin-button {
+  margin: 0;
+
+  appearance: none;
+}
+
+.training-engine-input-parameter-field input[type="number"] {
+  appearance: textfield;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .training-engine-inputs-parameters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .training-engine-inputs-parameters-grid {
+    grid-template-columns: 1fr;
+  }
+}

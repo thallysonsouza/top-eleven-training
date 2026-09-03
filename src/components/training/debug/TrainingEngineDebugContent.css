@@ -1,0 +1,410 @@
+/* =========================================================
+   SHARED ENGINE INPUTS
+========================================================= */
+
+.training-engine-debug-inputs {
+  display: grid;
+
+  grid-template-columns:
+    110px
+    110px
+    110px
+    minmax(220px, 1fr)
+    130px
+    auto;
+
+  gap: 8px;
+
+  align-items: stretch;
+
+  flex-shrink: 0;
+
+  padding: 9px;
+
+  border: 1px solid rgba(255, 215, 0, 0.12);
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.training-engine-debug-input {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.training-engine-debug-input label {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-debug-input select {
+  width: 100%;
+
+  height: 30px;
+
+  padding: 0 8px;
+
+  appearance: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #111111;
+
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-engine-debug-input select:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: #151515;
+}
+
+.training-engine-debug-input select:focus {
+  border-color: rgba(255, 215, 0, 0.45);
+
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.06);
+}
+
+.training-engine-debug-input select:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+.training-engine-debug-input.exercise {
+  min-width: 0;
+}
+
+/* =========================================================
+   PLAYER TYPE
+========================================================= */
+
+.training-engine-debug-type {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 215, 0, 0.14);
+
+  border-radius: 8px;
+
+  background: rgba(255, 215, 0, 0.035);
+}
+
+.training-engine-debug-type span {
+  color: #666666;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.training-engine-debug-type strong {
+  color: #ffd700;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.training-engine-debug-reset {
+  min-width: 56px;
+
+  align-self: stretch;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.training-engine-debug-reset:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: rgba(255, 215, 0, 0.04);
+
+  color: #ffd700;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .training-engine-debug-inputs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .training-engine-debug-input.exercise {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .training-engine-debug {
+    overflow-y: auto;
+  }
+
+  .training-engine-debug-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .training-engine-debug-input.exercise {
+    grid-column: auto;
+  }
+
+  .training-engine-debug-reset {
+    min-height: 36px;
+  }
+}
+
+/* =========================================================
+   DEBUG CONTENT
+========================================================= */
+
+.training-engine-debug {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  overflow: hidden;
+}
+
+.training-engine-debug-header {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TABLE NAVIGATION
+========================================================= */
+
+.training-engine-debug-navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  padding: 6px;
+
+  border: 1px solid rgba(255, 215, 0, 0.12);
+
+  border-radius: 9px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: rgba(255, 215, 0, 0.3) transparent;
+}
+
+.training-engine-debug-navigation button {
+  width: 32px;
+
+  height: 28px;
+
+  flex: 0 0 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #888888;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.training-engine-debug-navigation button:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+
+  background: rgba(255, 215, 0, 0.045);
+
+  color: #ffd700;
+}
+
+.training-engine-debug-navigation button.active {
+  border-color: #ffd700;
+
+  background: rgba(255, 215, 0, 0.1);
+
+  color: #ffd700;
+}
+
+/* =========================================================
+   TABLE CONTENT
+========================================================= */
+
+.training-engine-debug-content {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+.training-engine-debug-content > .training-engine-table {
+  flex: 1;
+
+  min-height: 0;
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.training-engine-debug-placeholder {
+  width: 100%;
+
+  min-height: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 30px;
+
+  border: 1px solid rgba(255, 215, 0, 0.13);
+
+  border-radius: 13px;
+
+  background: linear-gradient(180deg, #252525 0%, #1b1b1b 100%);
+
+  text-align: center;
+}
+
+.training-engine-debug-placeholder span {
+  color: #ffd700;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.9px;
+}
+
+.training-engine-debug-placeholder h2 {
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.training-engine-debug-placeholder p {
+  max-width: 420px;
+
+  margin-top: 5px;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}

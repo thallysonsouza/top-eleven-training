@@ -3,6 +3,7 @@ import calculateFairPrice from "./calculateFairPrice";
 import calculateAuctionScore from "./calculateAuctionScore";
 import getAuctionClassification from "./getAuctionClassification";
 import getAuctionRecommendation from "./getAuctionRecommendation";
+import normalizeMarketValue from "./normalizeMarketValue";
 
 const BASE_ACCOUNT_LEVEL = 5;
 
@@ -12,11 +13,13 @@ export default function auctionEngine({
   marketValue,
   playerAge,
 }) {
+  const normalizedMarketValue = normalizeMarketValue(marketValue);
+
   const baseOverall = calculateBaseOverall(playerOverall, accountLevel);
 
   const fairPrice = calculateFairPrice(playerAge, baseOverall);
 
-  const score = calculateAuctionScore(marketValue, fairPrice);
+  const score = calculateAuctionScore(normalizedMarketValue, fairPrice);
 
   const classification = getAuctionClassification(score);
 
@@ -25,7 +28,7 @@ export default function auctionEngine({
   return {
     accountLevel: Number(accountLevel),
     playerOverall: Number(playerOverall),
-    marketValue: Number(marketValue),
+    marketValue: normalizedMarketValue,
     playerAge: Number(playerAge),
 
     baseAccountLevel: BASE_ACCOUNT_LEVEL,

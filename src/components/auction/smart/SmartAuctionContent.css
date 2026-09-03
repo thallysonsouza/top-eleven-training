@@ -1,0 +1,16 @@
+.smart-auction-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.smart-auction-content-body {
+  width: 100%;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
