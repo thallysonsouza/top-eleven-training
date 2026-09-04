@@ -1,7 +1,8 @@
 import "./Login.css";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+
 import {
   ArrowLeft,
   Eye,
@@ -17,7 +18,8 @@ import { useToast } from "../context/ToastContext";
 function Login() {
   const navigate = useNavigate();
 
-  const { login, signup, loginWithFacebook, loginAsGuest, loading } = useAuth();
+  const { login, signup, loginWithFacebook, loginAsGuest, logged, loading } =
+    useAuth();
 
   const { showToast } = useToast();
 
@@ -35,8 +37,8 @@ function Login() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   /* =====================================================
-       HELPERS
-    ===================================================== */
+     HELPERS
+  ===================================================== */
 
   function clearFeedback() {
     setError("");
@@ -82,7 +84,7 @@ function Login() {
       return "Digite um e-mail válido.";
     }
 
-    if (text.includes("too many requests")) {
+    if (text.includes("too many requests") || text.includes("rate limit")) {
       return "Muitas tentativas. Aguarde alguns instantes.";
     }
 
@@ -94,8 +96,8 @@ function Login() {
   }
 
   /* =====================================================
-       LOGIN
-    ===================================================== */
+     LOGIN
+  ===================================================== */
 
   async function handleLogin(event) {
     event.preventDefault();
@@ -104,13 +106,11 @@ function Login() {
 
     if (!email.trim()) {
       setError("Digite seu e-mail.");
-
       return;
     }
 
     if (!password) {
       setError("Digite sua senha.");
-
       return;
     }
 
@@ -132,8 +132,8 @@ function Login() {
   }
 
   /* =====================================================
-       SIGN UP
-    ===================================================== */
+     SIGN UP
+  ===================================================== */
 
   async function handleSignup(event) {
     event.preventDefault();
@@ -142,31 +142,26 @@ function Login() {
 
     if (!name.trim()) {
       setError("Digite seu nome.");
-
       return;
     }
 
     if (!email.trim()) {
       setError("Digite seu e-mail.");
-
       return;
     }
 
     if (!password) {
       setError("Digite uma senha.");
-
       return;
     }
 
     if (password.length < 6) {
       setError("A senha precisa ter pelo menos 6 caracteres.");
-
       return;
     }
 
     if (password !== confirmPassword) {
       setError("As senhas não coincidem.");
-
       return;
     }
 
@@ -197,8 +192,8 @@ function Login() {
   }
 
   /* =====================================================
-       FACEBOOK
-    ===================================================== */
+     FACEBOOK
+  ===================================================== */
 
   async function handleFacebookLogin() {
     clearFeedback();
@@ -217,8 +212,8 @@ function Login() {
   }
 
   /* =====================================================
-       GUEST
-    ===================================================== */
+     GUEST
+  ===================================================== */
 
   function handleGuestLogin() {
     clearFeedback();
@@ -231,8 +226,8 @@ function Login() {
   }
 
   /* =====================================================
-       LOADING
-    ===================================================== */
+     AUTH LOADING
+  ===================================================== */
 
   if (loading) {
     return (
@@ -247,14 +242,23 @@ function Login() {
   }
 
   /* =====================================================
-       FORM
-    ===================================================== */
+     ALREADY LOGGED IN
+  ===================================================== */
+
+  if (logged) {
+    return <Navigate to="/app" replace />;
+  }
+
+  /* =====================================================
+     FORM
+  ===================================================== */
 
   return (
     <div className="login-page">
       <div className="login-background-grid" />
 
       <div className="login-background-glow login-background-glow-left" />
+
       <div className="login-background-glow login-background-glow-right" />
 
       <div className="login-decoration login-decoration-top">
@@ -265,8 +269,8 @@ function Login() {
 
       <div className="login-content">
         {/* =================================================
-                    BRAND
-                ================================================= */}
+            BRAND
+        ================================================= */}
 
         <div className="login-brand">
           <div className="login-brand-mark">⚽</div>
@@ -279,20 +283,24 @@ function Login() {
         </div>
 
         {/* =================================================
-                    CARD
-                ================================================= */}
+            CARD
+        ================================================= */}
 
         <div className="login-card">
           <div className="login-card-header">
             <div className="login-card-kicker">
               {mode === "login" && "WELCOME BACK"}
+
               {mode === "signup" && "NEW MANAGER"}
+
               {mode === "recovery" && "ACCOUNT RECOVERY"}
             </div>
 
             <h1>
               {mode === "login" && "Sign in"}
+
               {mode === "signup" && "Create account"}
+
               {mode === "recovery" && "Recover account"}
             </h1>
 
@@ -308,8 +316,8 @@ function Login() {
           </div>
 
           {/* =================================================
-                        LOGIN
-                    ================================================= */}
+              LOGIN
+          ================================================= */}
 
           {mode === "login" && (
             <form className="login-form" onSubmit={handleLogin}>
@@ -323,6 +331,7 @@ function Login() {
                   autoComplete="email"
                   onChange={(event) => {
                     setEmail(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -338,6 +347,7 @@ function Login() {
                   autoComplete="current-password"
                   onChange={(event) => {
                     setPassword(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -375,8 +385,8 @@ function Login() {
           )}
 
           {/* =================================================
-                        SIGNUP
-                    ================================================= */}
+              SIGNUP
+          ================================================= */}
 
           {mode === "signup" && (
             <form className="login-form" onSubmit={handleSignup}>
@@ -390,6 +400,7 @@ function Login() {
                   autoComplete="name"
                   onChange={(event) => {
                     setName(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -405,6 +416,7 @@ function Login() {
                   autoComplete="email"
                   onChange={(event) => {
                     setEmail(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -420,6 +432,7 @@ function Login() {
                   autoComplete="new-password"
                   onChange={(event) => {
                     setPassword(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -443,6 +456,7 @@ function Login() {
                   autoComplete="new-password"
                   onChange={(event) => {
                     setConfirmPassword(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -475,14 +489,15 @@ function Login() {
           )}
 
           {/* =================================================
-                        RECOVERY
-                    ================================================= */}
+              RECOVERY
+          ================================================= */}
 
           {mode === "recovery" && (
             <form
               className="login-form"
               onSubmit={(event) => {
                 event.preventDefault();
+
                 showToast(
                   "A recuperação de senha será habilitada no próximo passo.",
                   "info",
@@ -499,6 +514,7 @@ function Login() {
                   autoComplete="email"
                   onChange={(event) => {
                     setEmail(event.target.value);
+
                     clearFeedback();
                   }}
                 />
@@ -513,14 +529,16 @@ function Login() {
           )}
 
           {/* =================================================
-                        DIVIDER
-                    ================================================= */}
+              DIVIDER
+          ================================================= */}
 
           {mode !== "recovery" && (
             <>
               <div className="login-divider">
                 <span />
+
                 <strong>OU</strong>
+
                 <span />
               </div>
 
@@ -546,8 +564,8 @@ function Login() {
           )}
 
           {/* =================================================
-                        MODE SWITCH
-                    ================================================= */}
+              MODE SWITCH
+          ================================================= */}
 
           <div className="login-switch">
             {mode === "login" && (
@@ -584,8 +602,8 @@ function Login() {
         </div>
 
         {/* =================================================
-                    FOOTER
-                ================================================= */}
+            FOOTER
+        ================================================= */}
 
         <div className="login-footer">
           <span>MANAGE</span>
