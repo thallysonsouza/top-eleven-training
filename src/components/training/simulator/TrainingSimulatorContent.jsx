@@ -52,7 +52,7 @@ function TrainingSimulatorContent() {
       {/* ==================================================
           ENGINE DEBUG ACCESS
       ================================================== */}
-
+      {/* ==================================================
       <div className="training-engine-debug-area">
         <button
           type="button"
@@ -63,7 +63,7 @@ function TrainingSimulatorContent() {
           🔧 ABRIR DEBUG DO ENGINE
         </button>
       </div>
-
+      ================================================== */}
       {/* ==================================================
           PLAYER + CONFIGURATION
       ================================================== */}
