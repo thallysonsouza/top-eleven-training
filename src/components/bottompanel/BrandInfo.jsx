@@ -1,39 +1,19 @@
-import {
-
-    Layers3
-
-} from "lucide-react";
+import { Layers3 } from "lucide-react";
 
 import "./BrandInfo.css";
 
-function BrandInfo(){
+function BrandInfo() {
+  return (
+    <div className="brand-info">
+      <Layers3 size={20} />
 
-    return(
+      <div>
+        <strong>LionTactic</strong>
 
-        <div className="brand-info">
-
-            <Layers3 size={20}/>
-
-            <div>
-
-                <strong>
-
-                    Top Eleven Tools
-
-                </strong>
-
-                <span>
-
-                    Professional Training Platform
-
-                </span>
-
-            </div>
-
-        </div>
-
-    );
-
+        <span>Professional Training Platform</span>
+      </div>
+    </div>
+  );
 }
 
 export default BrandInfo;

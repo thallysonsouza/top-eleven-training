@@ -253,8 +253,8 @@ function Home() {
           </div>
 
           <div>
-            <span className="home-brand-name">TOP ELEVEN</span>
-            <span className="home-brand-subtitle">TOOLS</span>
+            <span className="home-brand-name">LIONTACTIC</span>
+            <span className="home-brand-subtitle"></span>
           </div>
         </button>
 
@@ -375,7 +375,7 @@ function Home() {
       =================================================== */}
 
       <footer className="home-footer">
-        <span>TOP ELEVEN TOOLS</span>
+        <span>ROYAL LION</span>
         <span>BUILD. ANALYZE. IMPROVE.</span>
         <span>© 2026</span>
       </footer>

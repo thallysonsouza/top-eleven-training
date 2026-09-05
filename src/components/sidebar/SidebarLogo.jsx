@@ -15,7 +15,7 @@ function SidebarLogo({ open, setOpen }) {
       {open && (
         <div className="logo-text">
           <h2>
-            Top Eleven <span>Tools</span>
+            <span>LionTactic</span>
           </h2>
 
           <small>Professional Platform</small>

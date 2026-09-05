@@ -276,7 +276,7 @@ function Login() {
           <div className="login-brand-mark">⚽</div>
 
           <div>
-            <span className="login-brand-title">TOP ELEVEN</span>
+            <span className="login-brand-title">LIONTACTIC</span>
 
             <span className="login-brand-subtitle">TOOLS</span>
           </div>
